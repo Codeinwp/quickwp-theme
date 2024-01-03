@@ -1,5 +1,5 @@
 {
-	"name": "twentytwentyfour",
+	"name": "quickwp",
 	"private": true,
 	"version": "0.0.1",
 	"description": "The default WordPress theme for 2024",
@@ -9,13 +9,13 @@
 		"WordPress",
 		"theme"
 	],
-	"homepage": "https://github.com/WordPress/twentytwentyfour#readme",
+	"homepage": "https://github.com/WordPress/quickwp#readme",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/WordPress/twentytwentyfour.git"
+		"url": "git+https://github.com/WordPress/quickwp.git"
 	},
 	"bugs": {
-		"url": "https://github.com/WordPress/twentytwentyfour/issues"
+		"url": "https://github.com/WordPress/quickwp/issues"
 	},
 	"devDependencies": {
 		"@wordpress/stylelint-config": "^20.0.2",

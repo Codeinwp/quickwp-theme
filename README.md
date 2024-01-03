@@ -2,7 +2,7 @@
 
 Welcome to the development repository for the default theme that will launch with [WordPress 6.4](https://make.wordpress.org/core/6-4/).
 
-<img width="1920" alt="2023" src="https://github.com/WordPress/twentytwentyfour/assets/1813435/d965b75d-03cd-4365-b963-b3862d482329">
+<img width="1920" alt="2023" src="https://github.com/WordPress/quickwp/assets/1813435/d965b75d-03cd-4365-b963-b3862d482329">
 
 Twenty Twenty-Four is built as a [block theme](https://developer.wordpress.org/block-editor/how-to-guides/themes/block-theme-overview/). The theme aims to ship with as little CSS as possible: our goal is for all theme styles to be configured through [`theme.json`](https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-json/) and editable through Global Styles. The theme development team will work closely with [Gutenberg](https://github.com/wordpress/gutenberg) contributors to build design tools in the block editor that enable this goal.
 
@@ -10,7 +10,7 @@ You can view a demo of this theme at [2024.wordpress.net](https://2024.wordpress
 
 ## Contributing
 
-If you would like to contribute code, the list of [open issues](https://github.com/WordPress/twentytwentyfour/issues) is a great place to start looking for tasks — but contributing is not just for developers. There are many opportunities to help with testing, triage, discussion, design, building [patterns](https://github.com/WordPress/twentytwentyfour/issues?q=is%3Aissue+is%3Aopen+label%3A%22%5BComponent%5D+Block+Patterns%22) and templates, and more. 
+If you would like to contribute code, the list of [open issues](https://github.com/WordPress/quickwp/issues) is a great place to start looking for tasks — but contributing is not just for developers. There are many opportunities to help with testing, triage, discussion, design, building [patterns](https://github.com/WordPress/quickwp/issues?q=is%3Aissue+is%3Aopen+label%3A%22%5BComponent%5D+Block+Patterns%22) and templates, and more. 
 
 If you'd like to help with triage, let @luminuu and @MaggieCabrera know in [WordPress.org's Slack instance](https://make.wordpress.org/chat/). We'll help you get set up with the ability to add labels to issues and PRs.
 
@@ -26,9 +26,9 @@ Also, consider enabling [development mode](https://make.wordpress.org/core/2023/
 
 ### Design
 
-The theme is designed in [Figma](https://www.figma.com/file/AlYr03vh4dVimwYwQkTdf6/Twenty-Twenty-Four?type=design&t=C79166eDp3vX7OOD-6). You can contribute by designing one of the [patterns](https://github.com/WordPress/twentytwentyfour/issues?q=is%3Aissue+is%3Aopen+label%3A%22%5BComponent%5D+Block+Patterns%22) planned for Twenty Twenty-Four. 
+The theme is designed in [Figma](https://www.figma.com/file/AlYr03vh4dVimwYwQkTdf6/Twenty-Twenty-Four?type=design&t=C79166eDp3vX7OOD-6). You can contribute by designing one of the [patterns](https://github.com/WordPress/quickwp/issues?q=is%3Aissue+is%3Aopen+label%3A%22%5BComponent%5D+Block+Patterns%22) planned for Twenty Twenty-Four. 
 
-As a default WordPress theme, it is important to leverage the existing design system wherever possible. That is the font sizes, [color palette choices](https://github.com/WordPress/twentytwentyfour/pull/106), and [spacing presets](https://github.com/WordPress/twentytwentyfour/pull/102). All patterns and templates will leverage this systems extensively. 
+As a default WordPress theme, it is important to leverage the existing design system wherever possible. That is the font sizes, [color palette choices](https://github.com/WordPress/quickwp/pull/106), and [spacing presets](https://github.com/WordPress/quickwp/pull/102). All patterns and templates will leverage this systems extensively. 
 
 ## Token Cheat-sheet
 
@@ -110,7 +110,7 @@ Make sure to add alt text to your images and to make sure to remove the IDs from
 
 ```
 <!-- wp:image {"id":125,"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="http://wp-stable.test/wp-content/themes/twentytwentyfour/assets/images/project.webp" alt="" class="wp-image-125"/></figure>
+<figure class="wp-block-image size-large"><img src="http://wp-stable.test/wp-content/themes/quickwp/assets/images/project.webp" alt="" class="wp-image-125"/></figure>
 <!-- /wp:image -->
 ```
 
@@ -118,7 +118,7 @@ would turn into
 
 ```
 <!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->
-<figure class="wp-block-image size-large"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/project.webp" alt="<?php echo esc_attr_x( 'Picture of a building', 'Alt text for project picture', 'twentytwentyfour' ); ?>"/></figure>
+<figure class="wp-block-image size-large"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/project.webp" alt="<?php echo esc_attr_x( 'Picture of a building', 'Alt text for project picture', 'quickwp' ); ?>"/></figure>
 <!-- /wp:image -->
 ```
 
@@ -152,7 +152,7 @@ turns into
 
 and 
 
-`<!-- wp:template-part {"slug":"header-portfolio","theme":"twentytwentyfour","area":"header","tagName":"header"} /-->`
+`<!-- wp:template-part {"slug":"header-portfolio","theme":"quickwp","area":"header","tagName":"header"} /-->`
 
 turns into 
 

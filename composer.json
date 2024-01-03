@@ -1,17 +1,17 @@
 {
-	"name": "wordpress/twentytwentyfour",
+	"name": "wordpress/quickwp",
 	"type": "package",
 	"description": "The default WordPress theme for 2024",
 	"keywords": [
 		"WordPress",
 		"Themes"
 	],
-	"homepage": "https://github.com/WordPress/twentytwentyfour",
+	"homepage": "https://github.com/WordPress/quickwp",
 	"license": "GPL-2.0-or-later",
 	"authors": [
 		{
 			"name": "Contributors",
-			"homepage": "https://github.com/WordPress/twentytwentyfour/contributors.md"
+			"homepage": "https://github.com/WordPress/quickwp/contributors.md"
 		}
 	],
 	"require": {
