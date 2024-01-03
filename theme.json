@@ -13,16 +13,36 @@
 			"defaultGradients": false, 
 			"duotone": [
 				{
-					"colors": ["#111111", "#ffffff"],
+					"colors": ["#000000", "#ffffff"],
 					"slug": "duotone-1",
 					"name": "Black and white"
+				},
+				{
+					"colors": ["#325CE8", "#fff"],
+					"slug": "duotone-2",
+					"name": "Primary and white"
+				},
+				{
+					"colors": ["#1A1919", "#325CE8"],
+					"slug": "duotone-3",
+					"name": "Dark and primary"
 				}
 			],
 			"gradients": [
 				{
 					"slug": "gradient-1",
-					"gradient": "linear-gradient(to bottom, #cfcabe 0%, #F9F9F9 100%)",
-					"name": "Vertical soft beige to white"
+					"gradient": "linear-gradient(to bottom, var(--wp--preset--color--accent-primary) 0%, var(--wp--preset--color--accent-secondary) 100%)",
+					"name": "primary to secondary"
+				},
+				{
+					"slug": "gradient-2",
+					"gradient": "linear-gradient(to bottom, var(--wp--preset--color--accent-primary) 0%, rgba(255, 255, 255, 0.0) 100%)",
+					"name": "primary to transparent"
+				},
+					{
+					"slug": "gradient-3",
+					"gradient": "linear-gradient(to bottom, var(--wp--preset--color--bg-dark) 0%, rgba(255, 255, 255, 0.0) 100%)",
+					"name": "dark to to transparent"
 				}
 			],
 			"palette": [
