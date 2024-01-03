@@ -1,19 +1,13 @@
 {
-	"name": "wordpress/quickwp",
+	"name": "codeinwp/quickwp",
 	"type": "package",
-	"description": "The default WordPress theme for 2024",
+	"description": "The default QuickWP theme.",
 	"keywords": [
 		"WordPress",
 		"Themes"
 	],
-	"homepage": "https://github.com/WordPress/quickwp",
+	"homepage": "https://github.com/Codeinwp/quickwp-theme",
 	"license": "GPL-2.0-or-later",
-	"authors": [
-		{
-			"name": "Contributors",
-			"homepage": "https://github.com/WordPress/quickwp/contributors.md"
-		}
-	],
 	"require": {
 		"php": ">=5.6"
 	},
