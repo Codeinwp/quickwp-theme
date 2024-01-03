@@ -26,8 +26,8 @@
 				}
 			],
 			"palette": [
-				{ 
-					"color": "#ffffff", 
+				{
+					"color": "#ffffff",
 					"name": "Background",
 					"slug": "bg-site"
 				},
@@ -244,7 +244,7 @@
 			
 			"core/calendar": {
 				"color": {
-					"text": "var(--wp--preset--color--text)"
+					"text": "var(--wp--preset--color--contrast)"
 				},
 				"css": ".wp-block-calendar table:where(:not(.has-text-color)) th{background-color:var(--wp--preset--color--bg-light);color:var(--wp--preset--color--text);border-color:var(--wp--preset--color--border)} & table:where(:not(.has-text-color)) td{border-color:var(--wp--preset--color--border)}"
 			},
@@ -259,7 +259,7 @@
 			},
 			"core/code": {
 				"border": {
-					"color": "var(--wp--preset--color--border)"
+					"color": "var(--wp--preset--color--contrast)"
 				},
 				"color": {
 					"background": "var(--wp--preset--color--bg-dark)",
@@ -490,7 +490,7 @@
 							}
 						},
 						"color": {
-							"text": "var(--wp--preset--color--text)"
+							"text": "var(--wp--preset--color--contrast-2)"
 						},
 						"typography": {
 							"textDecoration": "none"
@@ -516,7 +516,7 @@
 					"link": {
 						":hover": {
 							"typography": {
-								"textDecoration": "underline"
+								"textDecoration": "none"
 							}
 						},
 						"typography": {
