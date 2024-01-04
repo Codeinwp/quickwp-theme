@@ -289,7 +289,19 @@
 			],
 			"writingMode": true
 		},
-		"useRootPaddingAwareAlignments": true
+		"useRootPaddingAwareAlignments": true,
+		"custom": {
+			"radius": {
+				"button": "5px",
+				"card": "5px",
+				"image": "5px"
+			},
+			"lineHeight": {
+				"s": "1.2",
+				"m": "1.5",
+				"l": "1.6"
+			}
+		}
 	},
 	"styles": {
 		"blocks": {
