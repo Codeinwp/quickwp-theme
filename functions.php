@@ -57,8 +57,8 @@ if ( ! function_exists( 'twentytwentyfour_block_styles' ) ) :
 				.is-style-pill a,
 				.is-style-pill span:not([class], [data-rich-text-placeholder]) {
 					display: inline-block;
-					background-color: var(--wp--preset--color--accent-1);
-					color: var(--wp--preset--color--contrast-3);
+					background-color: var(--wp--preset--color--accent);
+					color: var(--wp--preset--color--contrast-4);
 					padding: var(--wp--preset--spacing--10) var(--wp--preset--spacing--20);
 					border-radius: 999px;
 					line-height:1;
