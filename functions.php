@@ -72,13 +72,17 @@ if ( ! function_exists( 'quickwp_block_styles' ) ) :
 				.is-style-pill a,
 				.is-style-pill span:not([class], [data-rich-text-placeholder]) {
 					display: inline-block;
-					background-color: var(--wp--preset--color--base-2);
-					padding: 0.375rem 0.875rem;
-					border-radius: var(--wp--preset--spacing--20);
+					background-color: var(--wp--preset--color--accent);
+					color: var(--wp--preset--color--contrast-4);
+					padding: var(--wp--preset--spacing--10) var(--wp--preset--spacing--20);
+					border-radius: 999px;
+					line-height:1;
+
 				}
 
 				.is-style-pill a:hover {
-					background-color: var(--wp--preset--color--contrast-3);
+					background-color: var(--wp--preset--color--accent-2);
+					text-decoration:none;
 				}',
 			)
 		);
@@ -117,43 +121,6 @@ if ( ! function_exists( 'quickwp_block_styles' ) ) :
 					text-decoration: none;
 					display: inline-block;
 				}',
-			)
-		);
-		register_block_style(
-			'core/heading',
-			array(
-				'name'         => 'asterisk',
-				'label'        => __( 'With asterisk', 'quickwp' ),
-				'inline_style' => "
-				.is-style-asterisk:before {
-					content: '';
-					width: 1.5rem;
-					height: 3rem;
-					background: var(--wp--preset--color--contrast-2, currentColor);
-					clip-path: path('M11.93.684v8.039l5.633-5.633 1.216 1.23-5.66 5.66h8.04v1.737H13.2l5.701 5.701-1.23 1.23-5.742-5.742V21h-1.737v-8.094l-5.77 5.77-1.23-1.217 5.743-5.742H.842V9.98h8.162l-5.701-5.7 1.23-1.231 5.66 5.66V.684h1.737Z');
-					display: block;
-				}
-
-				/* Hide the asterisk if the heading has no content, to avoid using empty headings to display the asterisk only, which is an A11Y issue */
-				.is-style-asterisk:empty:before {
-					content: none;
-				}
-
-				.is-style-asterisk:-moz-only-whitespace:before {
-					content: none;
-				}
-
-				.is-style-asterisk.has-text-align-center:before {
-					margin: 0 auto;
-				}
-
-				.is-style-asterisk.has-text-align-right:before {
-					margin-left: auto;
-				}
-
-				.rtl .is-style-asterisk.has-text-align-left:before {
-					margin-right: auto;
-				}",
 			)
 		);
 	}
