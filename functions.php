@@ -57,15 +57,16 @@ if ( ! function_exists( 'twentytwentyfour_block_styles' ) ) :
 				.is-style-pill a,
 				.is-style-pill span:not([class], [data-rich-text-placeholder]) {
 					display: inline-block;
-					background-color: var(--wp--preset--color--accent-primary);
-					color: var(--wp--preset--color--text-on-dark);
+					background-color: var(--wp--preset--color--accent-1);
+					color: var(--wp--preset--color--contrast-3);
 					padding: var(--wp--preset--spacing--10) var(--wp--preset--spacing--20);
 					border-radius: 999px;
+					line-height:1;
 
 				}
 
 				.is-style-pill a:hover {
-					background-color: var(--wp--preset--color--accent-secondary);
+					background-color: var(--wp--preset--color--accent-2);
 					text-decoration:none;
 				}',
 			)
