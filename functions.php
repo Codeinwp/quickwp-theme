@@ -9,23 +9,38 @@
  */
 
 /**
+ * Register Theme Support
+ */
+
+if ( ! function_exists( 'quickwp_setup' ) ) :
+	/**
+	 * Sets up theme defaults and registers support for various WordPress features.
+	 */
+	function quickwp_setup() {
+		remove_theme_support( 'core-block-patterns' );
+	}
+endif;
+
+add_action( 'after_setup_theme', 'quickwp_setup' );
+
+/**
  * Register block styles.
  */
 
-if ( ! function_exists( 'twentytwentyfour_block_styles' ) ) :
+if ( ! function_exists( 'quickwp_block_styles' ) ) :
 	/**
 	 * Register custom block styles
 	 *
 	 * @since Twenty Twenty-Four 1.0
 	 * @return void
 	 */
-	function twentytwentyfour_block_styles() {
+	function quickwp_block_styles() {
 
 		register_block_style(
 			'core/details',
 			array(
 				'name'         => 'arrow-icon-details',
-				'label'        => __( 'Arrow icon', 'twentytwentyfour' ),
+				'label'        => __( 'Arrow icon', 'quickwp' ),
 				/*
 				 * Styles for the custom Arrow icon style of the Details block
 				 */
@@ -48,7 +63,7 @@ if ( ! function_exists( 'twentytwentyfour_block_styles' ) ) :
 			'core/post-terms',
 			array(
 				'name'         => 'pill',
-				'label'        => __( 'Pill', 'twentytwentyfour' ),
+				'label'        => __( 'Pill', 'quickwp' ),
 				/*
 				 * Styles variation for post terms
 				 * https://github.com/WordPress/gutenberg/issues/24956
@@ -75,7 +90,7 @@ if ( ! function_exists( 'twentytwentyfour_block_styles' ) ) :
 			'core/list',
 			array(
 				'name'         => 'checkmark-list',
-				'label'        => __( 'Checkmark', 'twentytwentyfour' ),
+				'label'        => __( 'Checkmark', 'quickwp' ),
 				/*
 				 * Styles for the custom checkmark list block style
 				 * https://github.com/WordPress/gutenberg/issues/51480
@@ -94,7 +109,7 @@ if ( ! function_exists( 'twentytwentyfour_block_styles' ) ) :
 			'core/navigation-link',
 			array(
 				'name'         => 'arrow-link',
-				'label'        => __( 'With arrow', 'twentytwentyfour' ),
+				'label'        => __( 'With arrow', 'quickwp' ),
 				/*
 				 * Styles for the custom arrow nav link block style
 				 */
@@ -111,20 +126,20 @@ if ( ! function_exists( 'twentytwentyfour_block_styles' ) ) :
 	}
 endif;
 
-add_action( 'init', 'twentytwentyfour_block_styles' );
+add_action( 'init', 'quickwp_block_styles' );
 
 /**
  * Enqueue block stylesheets.
  */
 
-if ( ! function_exists( 'twentytwentyfour_block_stylesheets' ) ) :
+if ( ! function_exists( 'quickwp_block_stylesheets' ) ) :
 	/**
 	 * Enqueue custom block stylesheets
 	 *
 	 * @since Twenty Twenty-Four 1.0
 	 * @return void
 	 */
-	function twentytwentyfour_block_stylesheets() {
+	function quickwp_block_stylesheets() {
 		/**
 		 * The wp_enqueue_block_style() function allows us to enqueue a stylesheet
 		 * for a specific block. These will only get loaded when the block is rendered
@@ -136,7 +151,7 @@ if ( ! function_exists( 'twentytwentyfour_block_stylesheets' ) ) :
 		wp_enqueue_block_style(
 			'core/button',
 			array(
-				'handle' => 'twentytwentyfour-button-style-outline',
+				'handle' => 'quickwp-button-style-outline',
 				'src'    => get_parent_theme_file_uri( 'assets/css/button-outline.css' ),
 				'ver'    => wp_get_theme( get_template() )->get( 'Version' ),
 				'path'   => get_parent_theme_file_path( 'assets/css/button-outline.css' ),
@@ -145,20 +160,20 @@ if ( ! function_exists( 'twentytwentyfour_block_stylesheets' ) ) :
 	}
 endif;
 
-add_action( 'init', 'twentytwentyfour_block_stylesheets' );
+add_action( 'init', 'quickwp_block_stylesheets' );
 
 /**
  * Register pattern categories.
  */
 
-if ( ! function_exists( 'twentytwentyfour_pattern_categories' ) ) :
+if ( ! function_exists( 'quickwp_pattern_categories' ) ) :
 	/**
 	 * Register pattern categories
 	 *
 	 * @since Twenty Twenty-Four 1.0
 	 * @return void
 	 */
-	function twentytwentyfour_pattern_categories() {
+	function quickwp_pattern_categories() {
 
 		register_block_pattern_category(
 			'page',
@@ -170,4 +185,4 @@ if ( ! function_exists( 'twentytwentyfour_pattern_categories' ) ) :
 	}
 endif;
 
-add_action( 'init', 'twentytwentyfour_pattern_categories' );
+add_action( 'init', 'quickwp_pattern_categories' );
