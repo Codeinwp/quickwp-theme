@@ -280,4 +280,4 @@ if ( ! function_exists( 'quickwp_strings' ) ) :
 	}
 endif;
 
-add_filter( 'quickwp_strings', array( $this, 'quickwp_strings' ) );
+add_filter( 'quickwp_strings', 'quickwp_strings' );
