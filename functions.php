@@ -129,7 +129,7 @@ endif;
 add_action( 'init', 'quickwp_block_styles' );
 
 
-define( 'QuickWP_URL', trailingslashit( get_template_directory_uri() ) );
+define( 'QUICKWP_URL', trailingslashit( get_template_directory_uri() ) );
 
 /**
  * Enqueue block stylesheets.
