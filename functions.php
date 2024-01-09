@@ -163,7 +163,7 @@ endif;
 add_action( 'init', 'quickwp_block_stylesheets' );
 
 /**
- * Register Categories
+ * Register pattern categories
  */
 
 if ( ! function_exists( 'quickwp_pattern_categories' ) ) :
@@ -171,10 +171,9 @@ if ( ! function_exists( 'quickwp_pattern_categories' ) ) :
 	 * Register categories
 	 *
 	 * @since QuickWP 1.0
-	 * @return array
+	 * @return void
 	 */
 	function quickwp_pattern_categories() {
-		
 		$categories = array(
 			'quickwp/featured'           => array( 'label' => __( 'Featured', 'quickwp' ) ),
 			'quickwp/headers'            => array( 'label' => __( 'Headers', 'quickwp' ) ),
