@@ -1,11 +1,11 @@
 <?php
 /**
- * Twenty Twenty-Four functions and definitions
+ * QuickWP functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Twenty Twenty-Four
- * @since Twenty Twenty-Four 1.0
+ * @package QuickWP
+ * @since QuickWP 1.0
  */
 
 /**
@@ -31,7 +31,7 @@ if ( ! function_exists( 'quickwp_block_styles' ) ) :
 	/**
 	 * Register custom block styles
 	 *
-	 * @since Twenty Twenty-Four 1.0
+	 * @since QuickWP 1.0
 	 * @return void
 	 */
 	function quickwp_block_styles() {
@@ -136,7 +136,7 @@ if ( ! function_exists( 'quickwp_block_stylesheets' ) ) :
 	/**
 	 * Enqueue custom block stylesheets
 	 *
-	 * @since Twenty Twenty-Four 1.0
+	 * @since QuickWP 1.0
 	 * @return void
 	 */
 	function quickwp_block_stylesheets() {
@@ -170,7 +170,7 @@ if ( ! function_exists( 'quickwp_pattern_categories' ) ) :
 	/**
 	 * Register pattern categories
 	 *
-	 * @since Twenty Twenty-Four 1.0
+	 * @since QuickWP 1.0
 	 * @return void
 	 */
 	function quickwp_pattern_categories() {
@@ -186,3 +186,98 @@ if ( ! function_exists( 'quickwp_pattern_categories' ) ) :
 endif;
 
 add_action( 'init', 'quickwp_pattern_categories' );
+
+/**
+ * Register Strings
+ */
+
+if ( ! function_exists( 'quickwp_strings' ) ) :
+	/** Register strings
+	 *
+	 * @since QuickWP 1.0
+	 * @return array
+	 */
+	function quickwp_strings( $strings ) {
+		$strings = array(
+
+			// Generic patterns.
+			'hero_title'              => __( 'Just another hero title to strengthen your message', 'quickwp' ),
+			'quickwp_feature_1'       => __( 'Easy to customise', 'quickwp' ),
+			'quickwp_feature_2'       => __( 'Patterns Collection', 'quickwp' ),
+			'quickwp_feature_3'       => __( 'Powered by Blocks', 'quickwp' ),
+			'page_title'              => __( 'This is a page title', 'quickwp' ),
+			'about_page_title'        => __( 'About our Team', 'quickwp' ),
+			'about_me'                => __( 'About me', 'quickwp' ),
+			'services_page_title'     => __( 'Explore our Services', 'quickwp' ),
+			'section_title'           => __( 'This is section title', 'quickwp' ),
+			'subtitle'                => __( 'Subtitle', 'quickwp' ),
+			'section_description'     => __( 'A short section description', 'quickwp' ),
+			'paragraph_text'          => __( 'This is placeholder text, feel free to replace it with your unique content. It  is included here just to provide you with a better understanding of how your text will fit in the layout.', 'quickwp' ),
+			'short_text'              => __( 'Just some placeholder text', 'quickwp' ),
+
+			// Feature patterns.
+			'feature_section_title'   => __( 'Showcase your Features and Services', 'quickwp' ),
+			'feature_title'           => __( 'This is feature title', 'quickwp' ),
+			'feature_description'     => __( 'A placeholder description that you can replace with your own content.', 'quickwp' ),
+			'button_text'             => __( 'Learn More', 'quickwp' ),
+			'button_text_2'           => __( 'Get Started', 'quickwp' ),
+
+			// Team patterns.
+			'team_section_title'      => __( 'Our Team', 'quickwp' ),
+			'team_member'             => __( 'Team member name', 'quickwp' ),
+			'member_role'             => __( 'Co-founder / Other Role', 'quickwp' ),
+
+			// Pricing patterns.
+			'pricing_section_title'   => __( 'A pricing section. Join premium!', 'quickwp' ),
+			'plan_title'              => __( 'Plan title', 'quickwp' ),
+			'price'                   => __( '$19.99', 'quickwp' ),
+			'price_feature'           => __( 'A pricing feature', 'quickwp' ),
+
+			// Contact patterns.
+			'contact_page_title'      => __( 'Get in touch', 'quickwp' ),
+			'contact_section_title'   => __( 'Contact details', 'quickwp' ),
+			'follow'                  => __( 'Follow us', 'quickwp' ),
+			'contact_details'         => __( 'Contact detail example', 'quickwp' ),
+
+			// FAQ patterns.
+			'faq_section_title'       => __( 'Frequently Asked Questions', 'quickwp' ),
+			'faq_title'               => __( 'Just a frequent question', 'quickwp' ),
+
+			// Portfolio patterns.
+			'portfolio_section_title' => __( 'Selected Portfolio', 'quickwp' ),
+			'portfolio_title'         => __( 'A project title', 'quickwp' ),
+			'portfolio_client'        => __( 'Client Name', 'quickwp' ),
+
+			// Loops and templates.
+			'read_more'               => __( 'Read more', 'quickwp' ),
+			'continue_reading'        => __( 'Continue reading', 'quickwp' ),
+			'no_posts_found'          => __( 'No posts were found', 'quickwp' ),
+			'search_results'          => __( 'Search results', 'quickwp' ),
+			'search_button'           => __( 'Search', 'quickwp' ),
+			'search_placeholder'      => __( 'Search for a keyword...', 'quickwp' ),
+			'404'                     => __( '404', 'quickwp' ),
+			'page_not_found'          => __( 'Unfortunately the page was not found.', 'quickwp' ),
+			'categories'              => __( 'Categories', 'quickwp' ),
+			'read_also'               => __( 'Read also…', 'quickwp' ),
+			'previous'                => __( 'Previous Page', 'quickwp' ),
+			'next'                    => __( 'Next Page', 'quickwp' ),
+
+			// Content Patterns.
+			'content_title'           => __( 'A generic content title', 'quickwp' ),
+			'content_subtitle'        => __( 'A content subtitle', 'quickwp' ),
+			'lorem_ipsum_subtitle'    => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', 'quickwp' ),
+
+			// Testimonial patterns.
+			'testimonial'             => __( '"...Absolutely one of the best services out there, very professional and easy-going experience, highly recommended..."', 'quickwp' ),
+			'testimonial_name'        => __( 'Jason Doe', 'quickwp' ),
+
+			// CTA patterns.
+			'cta_title'               => __( 'Get started today, get in touch!', 'quickwp' ),
+			'quickwp_cta_title'       => __( 'Create your new website today, with QuickWP!', 'quickwp' ),
+		);
+
+		return $strings;
+	}
+endif;
+
+add_filter( 'quickwp_strings', 'quickwp_strings' );
