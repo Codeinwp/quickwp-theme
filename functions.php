@@ -163,25 +163,39 @@ endif;
 add_action( 'init', 'quickwp_block_stylesheets' );
 
 /**
- * Register pattern categories.
+ * Register pattern categories
  */
 
 if ( ! function_exists( 'quickwp_pattern_categories' ) ) :
 	/**
-	 * Register pattern categories
+	 * Register categories
 	 *
 	 * @since QuickWP 1.0
 	 * @return void
 	 */
 	function quickwp_pattern_categories() {
-
-		register_block_pattern_category(
-			'page',
-			array(
-				'label'       => _x( 'Pages', 'Block pattern category' ),
-				'description' => __( 'A collection of full page layouts.' ),
-			)
+		$categories = array(
+			'quickwp/featured'           => array( 'label' => __( 'Featured', 'quickwp' ) ),
+			'quickwp/headers'            => array( 'label' => __( 'Headers', 'quickwp' ) ),
+			'quickwp/footers'            => array( 'label' => __( 'Footers', 'quickwp' ) ),
+			'quickwp/heroes_page_titles' => array( 'label' => __( 'Heroes / Page Titles', 'quickwp' ) ),
+			'quickwp/features'           => array( 'label' => __( 'Features', 'quickwp' ) ),
+			'quickwp/content'            => array( 'label' => __( 'Content', 'quickwp' ) ),
+			'quickwp/testimonials'       => array( 'label' => __( 'Testimonials', 'quickwp' ) ),
+			'quickwp/team'               => array( 'label' => __( 'Team', 'quickwp' ) ),
+			'quickwp/pricing'            => array( 'label' => __( 'Pricing', 'quickwp' ) ),
+			'quickwp/call_to_action'     => array( 'label' => __( 'Call to Action', 'quickwp' ) ),
+			'quickwp/post_loops'         => array( 'label' => __( 'Post Loops', 'quickwp' ) ),
+			'quickwp/pages'              => array( 'label' => __( 'Pages', 'quickwp' ) ),
 		);
+
+		foreach ( $categories as $slug => $args ) {
+			if ( WP_Block_Pattern_Categories_Registry::get_instance()->is_registered( $slug ) ) {
+				continue;
+			}
+
+			register_block_pattern_category( $slug, $args );
+		}
 	}
 endif;
 
