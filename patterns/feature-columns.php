@@ -2,13 +2,13 @@
 /**
  * Title: Feature Columns
  * Slug: quickwp/feature-columns
- * Categories: features
+ * Categories: quickwp/features
  */
 
 $quickwp_strings = apply_filters( 'quickwp_strings', array() );
 
 $images = array(
-	QuickWP_URL . 'assets/img/qwp-img-02.webp', 
+	QUICKWP_URL . 'assets/images/qwp-img-02.webp', 
 );
 
 ?>

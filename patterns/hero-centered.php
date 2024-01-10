@@ -2,13 +2,13 @@
 /**
  * Title: Hero Centered
  * Slug: quickwp/hero-centered
- * Categories: heroes_page_titles
+ * Categories: quickwp/heroes_page_titles
  */
 
 $quickwp_strings = apply_filters( 'quickwp_strings', array() );
 
 $images = array(
-	QuickWP_URL . 'assets/img/qwp-img-02.webp', 
+	QUICKWP_URL . 'assets/images/qwp-img-02.webp', 
 );
 
 ?>
