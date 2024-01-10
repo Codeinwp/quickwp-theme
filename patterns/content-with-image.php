@@ -5,7 +5,7 @@
  * Categories: quickwp/content
  */
 
-$quickwp_strings = apply_filters( 'quickwp_strings', array() );
+$quickwp_strings = apply_filters('quickwp_strings', array());
 
 $images = array(
     QUICKWP_URL . 'assets/images/qwp-img-02.webp',
@@ -22,16 +22,16 @@ $images = array(
 
 <!-- wp:column {"verticalAlignment":"center","width":"40%"} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:40%"><!-- wp:heading -->
-<h2 class="wp-block-heading"><?php echo esc_html( $quickwp_strings['section_title'] ); ?></h2>
+<h2 class="wp-block-heading"><?php echo esc_html($quickwp_strings['section_title']); ?></h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
-<p><?php echo esc_html( $quickwp_strings['paragraph_text'] ); ?></p>
+<p><?php echo esc_html($quickwp_strings['paragraph_text']); ?></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons -->
 <div class="wp-block-buttons"><!-- wp:button -->
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button"><?php echo esc_html( $quickwp_strings['button_text_2'] ); ?></a></div>
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button"><?php echo esc_html($quickwp_strings['button_text_2']); ?></a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:column --></div>
