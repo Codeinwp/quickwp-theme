@@ -5,7 +5,7 @@
  * Categories: quickwp/content
  */
 
-$quickwp_strings = apply_filters( 'quickwp_strings', array() );
+$quickwp_strings = apply_filters('quickwp_strings', array());
 
 $images = array(
 	QUICKWP_URL . 'assets/images/qwp-img-09.webp',
@@ -31,7 +31,7 @@ $images = array(
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"fontSize":"large"} -->
-			<p class="has-large-font-size"><?php echo esc_html( $quickwp_strings['paragraph_text'] ); ?></p>
+			<p class="has-large-font-size"><?php echo esc_html($quickwp_strings['paragraph_text']); ?></p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:column -->
@@ -39,7 +39,7 @@ $images = array(
 	<!-- /wp:columns -->
 
 	<!-- wp:image {"align":"wide","id":240,"sizeSlug":"large","linkDestination":"none","className":"is-style-default"} -->
-	<figure class="wp-block-image alignwide size-large is-style-default"><img src="<?php echo esc_url( $images[0] ); ?>" alt="" class="wp-image-240"/></figure>
+	<figure class="wp-block-image alignwide size-large is-style-default"><img src="<?php echo esc_url($images[0]); ?>" alt="" class="wp-image-240"/></figure>
 	<!-- /wp:image -->
 
 	<!-- wp:columns {"align":"wide"} -->
@@ -47,7 +47,7 @@ $images = array(
 		<!-- wp:column {"width":"40%"} -->
 		<div class="wp-block-column" style="flex-basis:40%">
 			<!-- wp:paragraph -->
-			<p><?php echo esc_html( $quickwp_strings['paragraph_text'] ); ?></p>
+			<p><?php echo esc_html($quickwp_strings['paragraph_text']); ?></p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:column -->
@@ -59,14 +59,14 @@ $images = array(
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"fontSize":"large"} -->
-			<p class="has-large-font-size"><?php echo esc_html( $quickwp_strings['paragraph_text'] ); ?></p>
+			<p class="has-large-font-size"><?php echo esc_html($quickwp_strings['paragraph_text']); ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:buttons -->
 			<div class="wp-block-buttons">
 				<!-- wp:button {"className":"is-style-outline"} -->
 				<div class="wp-block-button is-style-outline">
-					<a class="wp-block-button__link wp-element-button"><?php echo esc_html( $quickwp_strings['button_text_2'] ); ?></a>
+					<a class="wp-block-button__link wp-element-button"><?php echo esc_html($quickwp_strings['button_text_2']); ?></a>
 				</div>
 				<!-- /wp:button -->
 			</div>
