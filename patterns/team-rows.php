@@ -5,7 +5,7 @@
  * Categories: quickwp/team
  */
 
-$quickwp_strings = apply_filters('quickwp_strings', array());
+$quickwp_strings = apply_filters( 'quickwp_strings', array() );
 
 $images = array(
 	QUICKWP_URL . 'assets/img/qwp-img-05.webp', // Image 1 path
@@ -18,11 +18,11 @@ $images = array(
 	<!-- wp:columns {"verticalAlignment":"center","style":{"spacing":{"blockGap":{"top":"0","left":"0"}}}} -->
 	<div class="wp-block-columns are-vertically-aligned-center">
 		<!-- Repeating Section Start -->
-		<?php for ($i = 0; $i < 2; $i++): ?>
+		<?php for ( $i = 0; $i < 2; $i++ ) : ?>
 		<!-- wp:column {"verticalAlignment":"center","width":"30%"} -->
 		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:30%">
 			<!-- wp:image {"id":236,"sizeSlug":"full","linkDestination":"none","className":"is-style-default"} -->
-			<figure class="wp-block-image size-full is-style-default"><img src="<?php echo esc_url( $images[$i] ); ?>" alt="" class="wp-image-236"/></figure>
+			<figure class="wp-block-image size-full is-style-default"><img src="<?php echo esc_url( $images[ $i ] ); ?>" alt="" class="wp-image-236"/></figure>
 			<!-- /wp:image -->
 		</div>
 		<!-- /wp:column -->

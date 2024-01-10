@@ -5,7 +5,7 @@
  * Categories: quickwp/content
  */
 
-$quickwp_strings = apply_filters('quickwp_strings', array());
+$quickwp_strings = apply_filters( 'quickwp_strings', array() );
 
 $images = array(
 	QUICKWP_URL . 'assets/img/qwp-img-02.webp',

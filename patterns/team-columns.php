@@ -5,7 +5,7 @@
  * Categories: quickwp/team
  */
 
-$quickwp_strings = apply_filters('quickwp_strings', array());
+$quickwp_strings = apply_filters( 'quickwp_strings', array() );
 
 $images = array(
 	QUICKWP_URL . 'assets/img/qwp-img-05.webp',
@@ -20,7 +20,7 @@ $images = array(
 	<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|10"}},"layout":{"type":"constrained"}} -->
 	<div class="wp-block-group">
 		<!-- wp:heading {"textAlign":"center"} -->
-		<h2 class="wp-block-heading has-text-align-center"><?php echo esc_html($quickwp_strings['team_section_title']); ?></h2>
+		<h2 class="wp-block-heading has-text-align-center"><?php echo esc_html( $quickwp_strings['team_section_title'] ); ?></h2>
 		<!-- /wp:heading -->
 
 		<!-- wp:paragraph {"align":"center","style":{"elements":{"link":{"color":{"text":"var:preset|color|contrast-2"}}}},"textColor":"contrast-2"} -->
@@ -39,17 +39,17 @@ $images = array(
 		<!-- wp:column {"layout":{"type":"default"}} -->
 		<div class="wp-block-column">
 			<!-- wp:image {"id":236,"aspectRatio":"1","scale":"cover","sizeSlug":"full","linkDestination":"none","className":"is-style-default"} -->
-			<figure class="wp-block-image size-full is-style-default"><img <?php echo 'src="' . esc_url($images[0]) . '"'; ?> alt="" class="wp-image-236" style="aspect-ratio:1;object-fit:cover" /></figure>
+			<figure class="wp-block-image size-full is-style-default"><img <?php echo 'src="' . esc_url( $images[0] ) . '"'; ?> alt="" class="wp-image-236" style="aspect-ratio:1;object-fit:cover" /></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|10"}},"layout":{"type":"constrained"}} -->
 			<div class="wp-block-group">
 				<!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontStyle":"normal","fontWeight":"600","textTransform":"uppercase"}},"fontSize":"small"} -->
-				<h3 class="wp-block-heading has-text-align-center has-small-font-size" style="font-style:normal;font-weight:600;text-transform:uppercase"><?php echo esc_html($quickwp_strings['team_member']); ?></h3>
+				<h3 class="wp-block-heading has-text-align-center has-small-font-size" style="font-style:normal;font-weight:600;text-transform:uppercase"><?php echo esc_html( $quickwp_strings['team_member'] ); ?></h3>
 				<!-- /wp:heading -->
 
 				<!-- wp:paragraph {"align":"center","fontSize":"small"} -->
-				<p class="has-text-align-center has-small-font-size"><?php echo esc_html($quickwp_strings['member_role']); ?></p>
+				<p class="has-text-align-center has-small-font-size"><?php echo esc_html( $quickwp_strings['member_role'] ); ?></p>
 				<!-- /wp:paragraph -->
 			</div>
 			<!-- /wp:group -->
@@ -60,17 +60,17 @@ $images = array(
 		<!-- wp:column {"layout":{"type":"default"}} -->
 		<div class="wp-block-column">
 			<!-- wp:image {"id":235,"aspectRatio":"1","scale":"cover","sizeSlug":"full","linkDestination":"none","className":"is-style-default"} -->
-			<figure class="wp-block-image size-full is-style-default"><img <?php echo 'src="' . esc_url($images[1]) . '"'; ?> alt="" class="wp-image-235" style="aspect-ratio:1;object-fit:cover" /></figure>
+			<figure class="wp-block-image size-full is-style-default"><img <?php echo 'src="' . esc_url( $images[1] ) . '"'; ?> alt="" class="wp-image-235" style="aspect-ratio:1;object-fit:cover" /></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|10"}},"layout":{"type":"constrained"}} -->
 			<div class="wp-block-group">
 				<!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontStyle":"normal","fontWeight":"600","textTransform":"uppercase"}},"fontSize":"small"} -->
-				<h3 class="wp-block-heading has-text-align-center has-small-font-size" style="font-style:normal;font-weight:600;text-transform:uppercase"><?php echo esc_html($quickwp_strings['team_member']); ?></h3>
+				<h3 class="wp-block-heading has-text-align-center has-small-font-size" style="font-style:normal;font-weight:600;text-transform:uppercase"><?php echo esc_html( $quickwp_strings['team_member'] ); ?></h3>
 				<!-- /wp:heading -->
 
 				<!-- wp:paragraph {"align":"center","fontSize":"small"} -->
-				<p class="has-text-align-center has-small-font-size"><?php echo esc_html($quickwp_strings['member_role']); ?></p>
+				<p class="has-text-align-center has-small-font-size"><?php echo esc_html( $quickwp_strings['member_role'] ); ?></p>
 				<!-- /wp:paragraph -->
 			</div>
 			<!-- /wp:group -->
@@ -81,17 +81,17 @@ $images = array(
 		<!-- wp:column {"layout":{"type":"default"}} -->
 		<div class="wp-block-column">
 			<!-- wp:image {"id":234,"aspectRatio":"1","scale":"cover","sizeSlug":"full","linkDestination":"none","className":"is-style-default"} -->
-			<figure class="wp-block-image size-full is-style-default"><img <?php echo 'src="' . esc_url($images[2]) . '"'; ?> alt="" class="wp-image-234" style="aspect-ratio:1;object-fit:cover" /></figure>
+			<figure class="wp-block-image size-full is-style-default"><img <?php echo 'src="' . esc_url( $images[2] ) . '"'; ?> alt="" class="wp-image-234" style="aspect-ratio:1;object-fit:cover" /></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|10"}},"layout":{"type":"constrained"}} -->
 			<div class="wp-block-group">
 				<!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontStyle":"normal","fontWeight":"600","textTransform":"uppercase"}},"fontSize":"small"} -->
-				<h3 class="wp-block-heading has-text-align-center has-small-font-size" style="font-style:normal;font-weight:600;text-transform:uppercase"><?php echo esc_html($quickwp_strings['team_member']); ?></h3>
+				<h3 class="wp-block-heading has-text-align-center has-small-font-size" style="font-style:normal;font-weight:600;text-transform:uppercase"><?php echo esc_html( $quickwp_strings['team_member'] ); ?></h3>
 				<!-- /wp:heading -->
 
 				<!-- wp:paragraph {"align":"center","fontSize":"small"} -->
-				<p class="has-text-align-center has-small-font-size"><?php echo esc_html($quickwp_strings['member_role']); ?></p>
+				<p class="has-text-align-center has-small-font-size"><?php echo esc_html( $quickwp_strings['member_role'] ); ?></p>
 				<!-- /wp:paragraph -->
 			</div>
 			<!-- /wp:group -->
@@ -102,17 +102,17 @@ $images = array(
 		<!-- wp:column {"layout":{"type":"default"}} -->
 		<div class="wp-block-column">
 			<!-- wp:image {"id":233,"aspectRatio":"1","scale":"cover","sizeSlug":"full","linkDestination":"none","className":"is-style-default"} -->
-			<figure class="wp-block-image size-full is-style-default"><img <?php echo 'src="' . esc_url($images[3]) . '"'; ?> alt="" class="wp-image-233" style="aspect-ratio:1;object-fit:cover" /></figure>
+			<figure class="wp-block-image size-full is-style-default"><img <?php echo 'src="' . esc_url( $images[3] ) . '"'; ?> alt="" class="wp-image-233" style="aspect-ratio:1;object-fit:cover" /></figure>
 			<!-- /wp:image -->
 
 			<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|10"}},"layout":{"type":"constrained"}} -->
 			<div class="wp-block-group">
 				<!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"fontStyle":"normal","fontWeight":"600","textTransform":"uppercase"}},"fontSize":"small"} -->
-				<h3 class="wp-block-heading has-text-align-center has-small-font-size" style="font-style:normal;font-weight:600;text-transform:uppercase"><?php echo esc_html($quickwp_strings['team_member']); ?></h3>
+				<h3 class="wp-block-heading has-text-align-center has-small-font-size" style="font-style:normal;font-weight:600;text-transform:uppercase"><?php echo esc_html( $quickwp_strings['team_member'] ); ?></h3>
 				<!-- /wp:heading -->
 
 				<!-- wp:paragraph {"align":"center","fontSize":"small"} -->
-				<p class="has-text-align-center has-small-font-size"><?php echo esc_html($quickwp_strings['member_role']); ?></p>
+				<p class="has-text-align-center has-small-font-size"><?php echo esc_html( $quickwp_strings['member_role'] ); ?></p>
 				<!-- /wp:paragraph -->
 			</div>
 			<!-- /wp:group -->
