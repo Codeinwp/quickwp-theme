@@ -20,7 +20,7 @@ $images = array(
 		<!-- wp:column {"verticalAlignment":"center","width":"30%"} -->
 		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:30%">
 			<!-- wp:image {"id":236,"sizeSlug":"full","linkDestination":"none","className":"is-style-default"} -->
-			<figure class="wp-block-image size-full is-style-default"><img alt=" "/></figure>
+			<figure class="wp-block-image size-full is-style-default"><img src="<?php echo esc_url( $images[0] ); ?>" alt=" "/></figure>
 			<!-- /wp:image -->
 		</div>
 		<!-- /wp:column -->
@@ -44,7 +44,7 @@ $images = array(
 		<!-- wp:column {"verticalAlignment":"center","width":"30%"} -->
 		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:30%">
 			<!-- wp:image {"id":236,"sizeSlug":"full","linkDestination":"none","className":"is-style-default"} -->
-			<figure class="wp-block-image size-full is-style-default"><img alt=" "/></figure>
+			<figure class="wp-block-image size-full is-style-default"><img src="<?php echo esc_url( $images[1] ); ?>" alt=" "/></figure>
 			<!-- /wp:image -->
 		</div>
 		<!-- /wp:column -->
