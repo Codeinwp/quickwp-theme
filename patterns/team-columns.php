@@ -8,10 +8,10 @@
 $quickwp_strings = apply_filters( 'quickwp_strings', array() );
 
 $images = array(
-	QUICKWP_URL . 'assets/img/qwp-img-05.webp',
-	QUICKWP_URL . 'assets/img/qwp-img-04.webp',
-	QUICKWP_URL . 'assets/img/qwp-img-03.webp',
-	QUICKWP_URL . 'assets/img/qwp-img-02.webp',
+	QUICKWP_URL . 'assets/img/qwp-images-05.webp',
+	QUICKWP_URL . 'assets/img/qwp-images-04.webp',
+	QUICKWP_URL . 'assets/img/qwp-images-03.webp',
+	QUICKWP_URL . 'assets/img/qwp-images-02.webp',
 );
 ?>
 
