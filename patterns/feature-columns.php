@@ -21,13 +21,11 @@ $images = array(
 		<!-- wp:heading {"textAlign":"center","fontSize":"x-large"} -->
 		<h2 class="wp-block-heading has-text-align-center has-x-large-font-size"><?php echo esc_html( $quickwp_strings['feature_section_title'] ); ?></h2>
 		<!-- /wp:heading -->
-
 		<!-- wp:paragraph {"align":"center","style":{"elements":{"link":{"color":{"text":"var:preset|color|contrast-2"}}}},"textColor":"contrast-2","fontSize":"large"} -->
 		<p class="has-text-align-center has-contrast-2-color has-text-color has-link-color has-large-font-size"><?php echo esc_html( $quickwp_strings['feature_description'] ); ?></p>
 		<!-- /wp:paragraph -->
 	</div>
 	<!-- /wp:group -->
-
 	<!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|40","left":"var:preset|spacing|40"}}}} -->
 	<div class="wp-block-columns alignwide">
 		<!-- wp:column -->
@@ -42,12 +40,10 @@ $images = array(
 						<!-- wp:heading {"level":3} -->
 						<h3 class="wp-block-heading"><?php echo esc_html( $quickwp_strings['feature_title'] ); ?></h3>
 						<!-- /wp:heading -->
-
 						<!-- wp:paragraph -->
 						<p><?php echo esc_html( $quickwp_strings['feature_description'] ); ?></p>
 						<!-- /wp:paragraph -->
 					</div>
-
 					<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"left"}} -->
 					<div class="wp-block-buttons">
 						<!-- wp:button -->
@@ -72,12 +68,10 @@ $images = array(
 						<!-- wp:heading {"level":3} -->
 						<h3 class="wp-block-heading"><?php echo esc_html( $quickwp_strings['feature_title'] ); ?></h3>
 						<!-- /wp:heading -->
-
 						<!-- wp:paragraph -->
 						<p><?php echo esc_html( $quickwp_strings['feature_description'] ); ?></p>
 						<!-- /wp:paragraph -->
 					</div>
-
 					<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"left"}} -->
 					<div class="wp-block-buttons">
 						<!-- wp:button -->
@@ -102,12 +96,10 @@ $images = array(
 						<!-- wp:heading {"level":3} -->
 						<h3 class="wp-block-heading"><?php echo esc_html( $quickwp_strings['feature_title'] ); ?></h3>
 						<!-- /wp:heading -->
-
 						<!-- wp:paragraph -->
 						<p><?php echo esc_html( $quickwp_strings['feature_description'] ); ?></p>
 						<!-- /wp:paragraph -->
 					</div>
-
 					<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"left"}} -->
 					<div class="wp-block-buttons">
 						<!-- wp:button -->
