@@ -128,8 +128,9 @@ endif;
 
 add_action( 'init', 'quickwp_block_styles' );
 
-
-define( 'QUICKWP_URL', trailingslashit( get_template_directory_uri() ) );
+if ( ! defined( 'QUICKWP_URL' ) ) {
+	define( 'QUICKWP_URL', trailingslashit( get_template_directory_uri() ) );
+}
 
 /**
  * Enqueue block stylesheets.

@@ -1,14 +1,14 @@
 <?php
 /**
- * Title: Feature Columns
- * Slug: quickwp/feature-columns
- * Categories: quickwp/features
+ * Title: Hero Centered
+ * Slug: quickwp/hero-centered
+ * Categories: quickwp/heroes_page_titles
  */
 
 $quickwp_strings = apply_filters( 'quickwp_strings', array() );
 
 $images = array(
-	QUICKWP_URL . 'assets/img/qwp-img-02.webp',
+	QUICKWP_URL . 'assets/images/qwp-img-02.webp',
 );
 ?>
 
@@ -39,7 +39,7 @@ $images = array(
 	<!-- /wp:group -->
 
 	<!-- wp:image {"align":"wide","id":240,"sizeSlug":"full","linkDestination":"none","className":"is-style-default"} -->
-	<figure class="wp-block-image alignwide size-full is-style-default"><img src="<?php echo esc_url( $images[0] ); ?>" alt="" class="wp-image-240" /></figure>
+	<figure class="wp-block-image alignwide size-full is-style-default"><img src="<?php echo esc_url( $images[0] ); ?>" alt="" class="wp-image-240"/></figure>
 	<!-- /wp:image -->
 </div>
 <!-- /wp:group -->
