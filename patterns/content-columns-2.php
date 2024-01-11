@@ -8,7 +8,7 @@
 $quickwp_strings = apply_filters( 'quickwp_strings', array() );
 
 $images = array(
-	esc_url( QUICKWP_URL . 'assets/img/qwp-img-08.webp' ),
+	esc_url( QUICKWP_URL . 'assets/images/qwp-img-08.webp' ),
 );
 ?>
 
