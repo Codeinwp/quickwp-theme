@@ -21,7 +21,7 @@ $images = array(
 			<!-- wp:column {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|20"},"elements":{"link":{"color":{"text":"var:preset|color|contrast"}}}},"backgroundColor":"base-2","textColor":"contrast"} -->
 			<div class="wp-block-column has-contrast-color has-base-2-background-color has-text-color has-background has-link-color" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
 				<!-- wp:image {"id":236,"width":"88px","aspectRatio":"1","scale":"cover","sizeSlug":"full","linkDestination":"none","className":"is-resized is-style-rounded"} -->
-				<figure class="wp-block-image size-full is-resized is-style-rounded"><img src="<?php echo esc_url( $images[ 0 ] ); ?>" alt=" " class="wp-image-236" style="aspect-ratio:1;object-fit:cover;width:88px"/></figure>
+				<figure class="wp-block-image size-full is-resized is-style-rounded"><img src="<?php echo esc_url( $images[0] ); ?>" alt=" " class="wp-image-236" style="aspect-ratio:1;object-fit:cover;width:88px"/></figure>
 				<!-- /wp:image -->
 
 				<!-- wp:paragraph {"align":"left","fontSize":"normal"} -->
@@ -40,7 +40,7 @@ $images = array(
 		<!-- wp:column {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|20"},"elements":{"link":{"color":{"text":"var:preset|color|contrast"}}}},"backgroundColor":"base-2","textColor":"contrast"} -->
 			<div class="wp-block-column has-contrast-color has-base-2-background-color has-text-color has-background has-link-color" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
 				<!-- wp:image {"id":236,"width":"88px","aspectRatio":"1","scale":"cover","sizeSlug":"full","linkDestination":"none","className":"is-resized is-style-rounded"} -->
-				<figure class="wp-block-image size-full is-resized is-style-rounded"><img src="<?php echo esc_url( $images[ 1 ] ); ?>" alt=" " class="wp-image-236" style="aspect-ratio:1;object-fit:cover;width:88px"/></figure>
+				<figure class="wp-block-image size-full is-resized is-style-rounded"><img src="<?php echo esc_url( $images[1] ); ?>" alt=" " class="wp-image-236" style="aspect-ratio:1;object-fit:cover;width:88px"/></figure>
 				<!-- /wp:image -->
 
 				<!-- wp:paragraph {"align":"left","fontSize":"normal"} -->
@@ -59,7 +59,7 @@ $images = array(
 		<!-- wp:column {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|20"},"elements":{"link":{"color":{"text":"var:preset|color|contrast"}}}},"backgroundColor":"base-2","textColor":"contrast"} -->
 			<div class="wp-block-column has-contrast-color has-base-2-background-color has-text-color has-background has-link-color" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
 				<!-- wp:image {"id":236,"width":"88px","aspectRatio":"1","scale":"cover","sizeSlug":"full","linkDestination":"none","className":"is-resized is-style-rounded"} -->
-				<figure class="wp-block-image size-full is-resized is-style-rounded"><img src="<?php echo esc_url( $images[ 2 ] ); ?>" alt=" " class="wp-image-236" style="aspect-ratio:1;object-fit:cover;width:88px"/></figure>
+				<figure class="wp-block-image size-full is-resized is-style-rounded"><img src="<?php echo esc_url( $images[2] ); ?>" alt=" " class="wp-image-236" style="aspect-ratio:1;object-fit:cover;width:88px"/></figure>
 				<!-- /wp:image -->
 
 				<!-- wp:paragraph {"align":"left","fontSize":"normal"} -->
