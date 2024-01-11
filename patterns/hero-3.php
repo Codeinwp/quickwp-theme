@@ -67,7 +67,7 @@ $images = array(
 	<!-- /wp:columns -->
 
 	<!-- wp:image {"align":"wide","id":240,"sizeSlug":"full","linkDestination":"none","className":"is-style-default"} -->
-	<figure class="wp-block-image alignwide size-full is-style-default"><img <?php echo 'src="' . esc_url( $images[0] ) . '"'; ?> alt="" class="wp-image-240" /></figure>
+	<figure class="wp-block-image alignwide size-full is-style-default"><img src="<?php echo esc_url( $images[0] ); ?>" alt="" class="wp-image-240"/></figure>
 	<!-- /wp:image -->
 </div>
 <!-- /wp:group -->
