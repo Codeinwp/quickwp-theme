@@ -8,7 +8,7 @@
 $quickwp_strings = apply_filters( 'quickwp_strings', array() );
 
 $images = array(
-	QUICKWP_URL . 'assets/images/qwp-img-03.webp',
+	apply_filters( 'quickwp/content-columns/image', QUICKWP_URL . 'assets/images/qwp-img-03.webp' ),
 );
 ?>
 
@@ -21,23 +21,23 @@ $images = array(
 			<!-- wp:column -->
 			<div class="wp-block-column">
 				<!-- wp:heading {"level":3,"style":{"typography":{"fontStyle":"normal","fontWeight":"600","textTransform":"uppercase"}},"fontSize":"small"} -->
-				<h3 class="wp-block-heading has-small-font-size" style="font-style:normal;font-weight:600;text-transform:uppercase"><?php echo esc_html( $quickwp_strings['content_subtitle'] ); ?></h3>
+				<h3 class="wp-block-heading has-small-font-size" style="font-style:normal;font-weight:600;text-transform:uppercase"><?php echo esc_html( apply_filters( 'quickwp/content-columns/subtitle', $quickwp_strings['content_subtitle'] ) ); ?></h3>
 				<!-- /wp:heading -->
 
 				<!-- wp:heading -->
-				<h2 class="wp-block-heading"><?php echo esc_html( $quickwp_strings['content_title'] ); ?></h2>
+				<h2 class="wp-block-heading"><?php echo esc_html( apply_filters( 'quickwp/content-columns/title', $quickwp_strings['content_title'] ) ); ?></h2>
 				<!-- /wp:heading -->
 
 				<!-- wp:paragraph -->
-				<p><?php echo esc_html( $quickwp_strings['paragraph_text'] ); ?></p>
+				<p><?php echo esc_html( apply_filters( 'quickwp/content-columns/paragraph-1', $quickwp_strings['paragraph_text'] ) ); ?></p>
 				<!-- /wp:paragraph -->
 
 				<!-- wp:paragraph {"fontSize":"large"} -->
-				<p class="has-large-font-size"><?php echo esc_html( $quickwp_strings['feature_description'] ); ?></p>
+				<p class="has-large-font-size"><?php echo esc_html( apply_filters( 'quickwp/content-columns/paragraph-2', $quickwp_strings['feature_description'] ) ); ?></p>
 				<!-- /wp:paragraph -->
 
 				<!-- wp:paragraph -->
-				<p><?php echo esc_html( $quickwp_strings['paragraph_text'] ); ?></p>
+				<p><?php echo esc_html( apply_filters( 'quickwp/content-columns/paragraph-3', $quickwp_strings['paragraph_text'] ) ); ?></p>
 				<!-- /wp:paragraph -->
 			</div>
 			<!-- /wp:column -->
@@ -45,7 +45,7 @@ $images = array(
 			<!-- wp:column {"verticalAlignment":"top"} -->
 			<div class="wp-block-column is-vertically-aligned-top">
 				<!-- wp:paragraph {"fontSize":"large"} -->
-				<p class="has-large-font-size"><?php echo esc_html( $quickwp_strings['paragraph_text'] ); ?></p>
+				<p class="has-large-font-size"><?php echo esc_html( apply_filters( 'quickwp/content-columns/paragraph-4', $quickwp_strings['paragraph_text'] ) ); ?></p>
 				<!-- /wp:paragraph -->
 
 				<!-- wp:image {"id":234,"sizeSlug":"full","linkDestination":"none"} -->

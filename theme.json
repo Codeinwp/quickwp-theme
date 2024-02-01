@@ -43,54 +43,50 @@
 			],
 			"palette": [
 				{
-					"color": "#ffffff",
+					"slug": "base",
 					"name": "Background",
-					"slug": "base"
-				},
-					{
-					"color": "#f7f7f3",
-					"name": "Light background",
-					"slug": "base-2"
-				},
-					{
-					"color": "#1A1919",
-					"name": "Dark background",
-					"slug": "base-3"
+					"color": "#ffffff"
 				},
 				{
-					"color": "#0C0C0C",
+					"slug": "base-2",
+					"name": "Light Background",
+					"color": "#f7f7f3"
+				},
+				{
+					"slug": "base-3",
+					"name": "Dark Background",
+					"color": "#1A1919"
+				},
+				{
+					"slug": "contrast",
 					"name": "Text",
-					"slug": "contrast"
+					"color": "#0C0C0C"
 				},
 				{
-					"color": "#808080",
-					"name": "Secondary Text",
-					"slug": "contrast-2"
+					"slug": "contrast-2",
+					"name": "Secondary text",
+					"color": "rgba(0,0,0, 0.5)"
 				},
-					{
-					"color": "#DADADA",
+				{
+					"slug": "contrast-3",
 					"name": "Border",
-					"slug": "contrast-3"
+					"color": "rgba(0,0,0, 0.5)"
 				},
-			
 				{
-					"color": "#F8F8F8",
+					"slug": "contrast-4",
 					"name": "Text on dark",
-					"slug": "contrast-4"
+					"color": "#F8F8F8"
 				},
-				
-			
 				{
-					"color": "#325CE8",
+					"slug": "accent",
 					"name": "Accent",
-					"slug": "accent"
+					"color": "#325CE8"
 				},
 				{
-					"color": "#466DEC",
+					"slug": "accent-2",
 					"name": "Accent 2",
-					"slug": "accent-2"
+					"color": "#466DEC"
 				}
-				
 			]
 		},
 		"layout": {

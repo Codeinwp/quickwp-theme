@@ -38,19 +38,49 @@
 			],
 			"palette": [
 				{
-					"color": "#F3F0E7",
-					"name": "Base",
-					"slug": "base"
+					"slug": "base",
+					"name": "Background",
+					"color": "#ffffff"
 				},
 				{
-					"color": "#ECEADF",
-					"name": "Base / 2",
-					"slug": "base-2"
+					"slug": "base-2",
+					"name": "Light Background",
+					"color": "#f7f7f3"
 				},
 				{
-					"color": "#A62B0C",
-					"name": "Contrast",
-					"slug": "contrast"
+					"slug": "base-3",
+					"name": "Dark Background",
+					"color": "#1A1919"
+				},
+				{
+					"slug": "contrast",
+					"name": "Text",
+					"color": "#0C0C0C"
+				},
+				{
+					"slug": "contrast-2",
+					"name": "Secondary text",
+					"color": "rgba(0,0,0, 0.5)"
+				},
+				{
+					"slug": "contrast-3",
+					"name": "Border",
+					"color": "rgba(0,0,0, 0.5)"
+				},
+				{
+					"slug": "contrast-4",
+					"name": "Text on dark",
+					"color": "#F8F8F8"
+				},
+				{
+					"slug": "accent",
+					"name": "Accent",
+					"color": "#325CE8"
+				},
+				{
+					"slug": "accent-2",
+					"name": "Accent 2",
+					"color": "#466DEC"
 				}
 			]
 		}
