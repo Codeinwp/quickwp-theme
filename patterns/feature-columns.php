@@ -10,7 +10,7 @@ $quickwp_strings = apply_filters( 'quickwp_strings', array() );
 $images = array(
 	apply_filters( 'quickwp/feature-columns/item-1/image', QUICKWP_URL . 'assets/images/qwp-img-08.webp' ),
 	apply_filters( 'quickwp/feature-columns/item-2/image', QUICKWP_URL . 'assets/images/qwp-img-06.webp' ),
-	apply_filters( 'quickwp/feature-columns/item-3/image', QUICKWP_URL . 'assets/images/qwp-img-09.webp' )
+	apply_filters( 'quickwp/feature-columns/item-3/image', QUICKWP_URL . 'assets/images/qwp-img-09.webp' ),
 );
 ?>
 

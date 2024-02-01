@@ -8,7 +8,7 @@
 $quickwp_strings = apply_filters( 'quickwp_strings', array() );
 
 $images = array(
-	apply_filters( 'quickwp/hero-centered/image', QUICKWP_URL . 'assets/images/qwp-img-09.webp' )
+	apply_filters( 'quickwp/hero-centered/image', QUICKWP_URL . 'assets/images/qwp-img-09.webp' ),
 );
 ?>
 
