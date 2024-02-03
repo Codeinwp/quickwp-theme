@@ -6,10 +6,6 @@
  */
 
 $quickwp_strings = apply_filters( 'quickwp_strings', array() );
-
-$images = array(
-	// Add image paths here as needed
-);
 ?>
 
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|70","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"margin":{"top":"0","bottom":"0"},"blockGap":"var:preset|spacing|50"},"elements":{"link":{"color":{"text":"var:preset|color|contrast-4"}}}},"backgroundColor":"accent","textColor":"contrast-4","layout":{"type":"constrained"}} -->

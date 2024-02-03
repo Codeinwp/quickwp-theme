@@ -8,8 +8,8 @@
 $quickwp_strings = apply_filters( 'quickwp_strings', array() );
 
 $images = array(
-	QUICKWP_URL . 'assets/images/qwp-img-08.webp',
-	QUICKWP_URL . 'assets/images/qwp-img-06.webp',
+	apply_filters( 'quickwp/feature-columns-2/item-1/image', QUICKWP_URL . 'assets/images/qwp-img-08.webp' ),
+	apply_filters( 'quickwp/feature-columns-2/item-2/image', QUICKWP_URL . 'assets/images/qwp-img-06.webp' ),
 );
 ?>
 
@@ -23,16 +23,16 @@ $images = array(
 
 	<!-- wp:group {"layout":{"type":"constrained"}} -->
 	<div class="wp-block-group"><!-- wp:heading {"fontSize":"large"} -->
-	<h2 class="wp-block-heading has-large-font-size"><?php echo esc_html( $quickwp_strings['content_title'] ); ?></h2>
+	<h2 class="wp-block-heading has-large-font-size"><?php echo esc_html( apply_filters( 'quickwp/feature-columns-2/item-1/title', $quickwp_strings['content_title'] ) ); ?></h2>
 	<!-- /wp:heading -->
 
 	<!-- wp:paragraph -->
-	<p><?php echo esc_html( $quickwp_strings['paragraph_text'] ); ?></p>
+	<p><?php echo esc_html( apply_filters( 'quickwp/feature-columns-2/item-1/description', $quickwp_strings['paragraph_text'] ) ); ?></p>
 	<!-- /wp:paragraph -->
 
 	<!-- wp:buttons -->
 	<div class="wp-block-buttons"><!-- wp:button -->
-	<div class="wp-block-button"><a class="wp-block-button__link wp-element-button"><?php echo esc_html( $quickwp_strings['button_text_2'] ); ?></a></div>
+	<div class="wp-block-button"><a class="wp-block-button__link wp-element-button"><?php echo esc_html( apply_filters( 'quickwp/feature-columns-2/item-1/button', $quickwp_strings['button_text_2'] ) ); ?></a></div>
 	<!-- /wp:button --></div>
 	<!-- /wp:buttons --></div>
 	<!-- /wp:group --></div>
@@ -45,16 +45,16 @@ $images = array(
 
 	<!-- wp:group {"layout":{"type":"constrained"}} -->
 	<div class="wp-block-group"><!-- wp:heading {"fontSize":"large"} -->
-	<h2 class="wp-block-heading has-large-font-size"><?php echo esc_html( $quickwp_strings['content_title'] ); ?></h2>
+	<h2 class="wp-block-heading has-large-font-size"><?php echo esc_html( apply_filters( 'quickwp/feature-columns-2/item-2/title', $quickwp_strings['content_title'] ) ); ?></h2>
 	<!-- /wp:heading -->
 
 	<!-- wp:paragraph -->
-	<p><?php echo esc_html( $quickwp_strings['paragraph_text'] ); ?></p>
+	<p><?php echo esc_html( apply_filters( 'quickwp/feature-columns-2/item-2/description', $quickwp_strings['paragraph_text'] ) ); ?></p>
 	<!-- /wp:paragraph -->
 
 	<!-- wp:buttons -->
 	<div class="wp-block-buttons"><!-- wp:button -->
-	<div class="wp-block-button"><a class="wp-block-button__link wp-element-button"><?php echo esc_html( $quickwp_strings['button_text_2'] ); ?></a></div>
+	<div class="wp-block-button"><a class="wp-block-button__link wp-element-button"><?php echo esc_html( apply_filters( 'quickwp/feature-columns-2/item-2/button', $quickwp_strings['button_text_2'] ) ); ?></a></div>
 	<!-- /wp:button --></div>
 	<!-- /wp:buttons --></div>
 	<!-- /wp:group --></div>
