@@ -20,7 +20,7 @@ $images = array(
 		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:60%">
 			<!-- wp:image {"id":242,"aspectRatio":"4/3","scale":"cover","sizeSlug":"full","linkDestination":"none","style":{"color":{}},"className":"is-style-default"} -->
 			<figure class="wp-block-image size-full is-style-default">
-				<img src="https://quickwp.vertisite.cloud/wp-content/uploads/2024/01/qwp-img-06.webp" alt="" class="wp-image-242" style="aspect-ratio:4/3;object-fit:cover"/>
+				<img src="<?php echo esc_url( $images[0] ); ?>" alt="" class="wp-image-242" style="aspect-ratio:4/3;object-fit:cover"/>
 			</figure>
 			<!-- /wp:image -->
 		</div>
