@@ -152,7 +152,7 @@ turns into
 
 and 
 
-`<!-- wp:template-part {"slug":"header-portfolio","theme":"quickwp","area":"header","tagName":"header"} /-->`
+`<!-- wp:template-part {"slug":"header-portfolio","theme":"quickwp-theme","area":"header","tagName":"header"} /-->`
 
 turns into 
 
