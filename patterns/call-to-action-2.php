@@ -15,11 +15,11 @@ $quickwp_strings = apply_filters( 'quickwp_strings', array() );
 		<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|20"}},"layout":{"type":"constrained"}} -->
 		<div class="wp-block-group">
 			<!-- wp:heading {"textAlign":"left","fontSize":"x-large"} -->
-			<h2 class="wp-block-heading has-text-align-left has-x-large-font-size"><?php echo esc_html( $quickwp_strings['cta_title'] ); ?></h2>
+			<h2 class="wp-block-heading has-text-align-left has-x-large-font-size"><?php echo esc_html( apply_filters( 'quickwp/call-to-action-2/title', $quickwp_strings['cta_title'] ) ); ?></h2>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"align":"left"} -->
-			<p class="has-text-align-left"><?php echo esc_html( $quickwp_strings['section_description'] ); ?></p>
+			<p class="has-text-align-left"><?php echo esc_html( apply_filters( 'quickwp/call-to-action-2/subtitle', $quickwp_strings['section_description'] ) ); ?></p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:group -->
@@ -28,7 +28,7 @@ $quickwp_strings = apply_filters( 'quickwp_strings', array() );
 		<div class="wp-block-buttons">
 			<!-- wp:button {"backgroundColor":"accent","style":{"spacing":{"padding":{"left":"var:preset|spacing|60","right":"var:preset|spacing|60","top":"var:preset|spacing|30","bottom":"var:preset|spacing|30"}}},"className":"is-style-fill","fontSize":"large"} -->
 			<div class="wp-block-button has-custom-font-size is-style-fill has-large-font-size">
-				<a class="wp-block-button__link has-accent-background-color has-background wp-element-button" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--60)"><?php echo esc_html( $quickwp_strings['button_text_2'] ); ?></a>
+				<a class="wp-block-button__link has-accent-background-color has-background wp-element-button" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--60)"><?php echo esc_html( apply_filters( 'quickwp/call-to-action-2/button', $quickwp_strings['button_text_2'] ) ); ?></a>
 			</div>
 			<!-- /wp:button -->
 		</div>

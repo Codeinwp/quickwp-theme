@@ -8,7 +8,7 @@
 $quickwp_strings = apply_filters( 'quickwp_strings', array() );
 
 $images = array(
-	QUICKWP_URL . 'assets/images/qwp-img-09.webp',
+	apply_filters( 'quickwp/content-on-background/image', QUICKWP_URL . 'assets/images/qwp-img-09.webp' ),
 );
 ?>
 
@@ -19,7 +19,7 @@ $images = array(
 		<!-- wp:column {"width":"40%"} -->
 		<div class="wp-block-column" style="flex-basis:40%">
 			<!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase","fontStyle":"normal","fontWeight":"600","letterSpacing":"2px"}},"fontSize":"small"} -->
-			<p class="has-small-font-size" style="font-style:normal;font-weight:600;letter-spacing:2px;text-transform:uppercase">Overview</p>
+			<p class="has-small-font-size" style="font-style:normal;font-weight:600;letter-spacing:2px;text-transform:uppercase"><?php echo esc_html( apply_filters( 'quickwp/content-on-background/subtitle', $quickwp_strings['content_subtitle'] ) ); ?></p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:column -->
@@ -27,11 +27,11 @@ $images = array(
 		<!-- wp:column {"width":"60%"} -->
 		<div class="wp-block-column" style="flex-basis:60%">
 			<!-- wp:heading -->
-			<h2 class="wp-block-heading">A content section</h2>
+			<h2 class="wp-block-heading"><?php echo esc_html( apply_filters( 'quickwp/content-on-background/title', $quickwp_strings['content_title'] ) ); ?></h2>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"fontSize":"large"} -->
-			<p class="has-large-font-size"><?php echo esc_html( $quickwp_strings['paragraph_text'] ); ?></p>
+			<p class="has-large-font-size"><?php echo esc_html( apply_filters( 'quickwp/content-on-background/paragraph-1', $quickwp_strings['paragraph_text'] ) ); ?></p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:column -->
@@ -47,7 +47,7 @@ $images = array(
 		<!-- wp:column {"width":"40%"} -->
 		<div class="wp-block-column" style="flex-basis:40%">
 			<!-- wp:paragraph -->
-			<p><?php echo esc_html( $quickwp_strings['paragraph_text'] ); ?></p>
+			<p><?php echo esc_html( apply_filters( 'quickwp/content-on-background/paragraph-2', $quickwp_strings['paragraph_text'] ) ); ?></p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:column -->
@@ -55,18 +55,18 @@ $images = array(
 		<!-- wp:column {"width":"60%"} -->
 		<div class="wp-block-column" style="flex-basis:60%">
 			<!-- wp:heading {"level":3} -->
-			<h3 class="wp-block-heading">A content section</h3>
+			<h3 class="wp-block-heading"><?php echo esc_html( apply_filters( 'quickwp/content-on-background/heading', $quickwp_strings['section_title'] ) ); ?></h3>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"fontSize":"large"} -->
-			<p class="has-large-font-size"><?php echo esc_html( $quickwp_strings['paragraph_text'] ); ?></p>
+			<p class="has-large-font-size"><?php echo esc_html( apply_filters( 'quickwp/content-on-background/paragraph-3', $quickwp_strings['paragraph_text'] ) ); ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:buttons -->
 			<div class="wp-block-buttons">
 				<!-- wp:button {"className":"is-style-outline"} -->
 				<div class="wp-block-button is-style-outline">
-					<a class="wp-block-button__link wp-element-button"><?php echo esc_html( $quickwp_strings['button_text_2'] ); ?></a>
+					<a class="wp-block-button__link wp-element-button"><?php echo esc_html( apply_filters( 'quickwp/content-on-background/button', $quickwp_strings['button_text_2'] ) ); ?></a>
 				</div>
 				<!-- /wp:button -->
 			</div>

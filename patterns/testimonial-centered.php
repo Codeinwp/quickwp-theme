@@ -8,7 +8,7 @@
 $quickwp_strings = apply_filters( 'quickwp_strings', array() );
 
 $images = array(
-	QUICKWP_URL . 'assets/images/qwp-img-04.webp',
+	apply_filters( 'quickwp/testimonial-centered/image', QUICKWP_URL . 'assets/images/qwp-img-04.webp' ),
 );
 ?>
 
@@ -21,7 +21,7 @@ $images = array(
 		<!-- /wp:image -->
 
 		<!-- wp:paragraph {"align":"center","fontSize":"x-large"} -->
-		<p class="has-text-align-center has-x-large-font-size"><?php echo esc_html( $quickwp_strings['testimonial'] ); ?></p>
+		<p class="has-text-align-center has-x-large-font-size"><?php echo esc_html( apply_filters( 'quickwp/testimonial-centered/testimonial', $quickwp_strings['testimonial'] ) ); ?></p>
 		<!-- /wp:paragraph -->
 
 		<!-- wp:paragraph {"align":"center","style":{"elements":{"link":{"color":{"text":"var:preset|color|raft-accent"}}}},"textColor":"raft-accent","fontSize":"medium"} -->
@@ -29,7 +29,7 @@ $images = array(
 		<!-- /wp:paragraph -->
 
 		<!-- wp:paragraph {"align":"center","style":{"typography":{"textTransform":"uppercase","fontStyle":"normal","fontWeight":"600","letterSpacing":"2px"}},"fontSize":"small"} -->
-		<p class="has-text-align-center has-small-font-size" style="font-style:normal;font-weight:600;letter-spacing:2px;text-transform:uppercase"><?php echo esc_html( $quickwp_strings['testimonial_name'] ); ?></p>
+		<p class="has-text-align-center has-small-font-size" style="font-style:normal;font-weight:600;letter-spacing:2px;text-transform:uppercase"><?php echo esc_html( apply_filters( 'quickwp/testimonial-centered/name', $quickwp_strings['testimonial_name'] ) ); ?></p>
 		<!-- /wp:paragraph -->
 	</div>
 	<!-- /wp:group -->
