@@ -44,7 +44,7 @@ $content = new ThemeIsle\QuickWPTheme\Content( 'content-on-background', 'content
 		<!-- wp:column {"width":"40%"} -->
 		<div class="wp-block-column" style="flex-basis:40%">
 			<!-- wp:paragraph -->
-			<p><?php $content->string( 'paragraph-2', 'paragraph_text', 'paragraph-2' ); ?>></p>
+			<p><?php $content->string( 'paragraph-2', 'paragraph_text', 'paragraph-2' ); ?></p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:column -->
