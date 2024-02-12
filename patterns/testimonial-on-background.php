@@ -4,12 +4,9 @@
  * Slug: quickwp/testimonial-on-background
  * Categories: quickwp/testimonials
  */
+require_once QUICKWP_PATH . 'inc/class-content.php';
 
-$quickwp_strings = apply_filters( 'quickwp_strings', array() );
-
-$images = array(
-	apply_filters( 'quickwp/testimonial-on-background/image', QUICKWP_URL . 'assets/images/qwp-img-02.webp' ),
-);
+$content = new ThemeIsle\QuickWPTheme\Content( 'testimonial-on-background' );
 ?>
 
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|70","left":"var:preset|spacing|30","right":"var:preset|spacing|30"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"base-3","textColor":"contrast-4","layout":{"type":"constrained","contentSize":""},"metadata":{"name":"Testimonial"}} -->
@@ -17,7 +14,7 @@ $images = array(
 	<!-- wp:group {"layout":{"type":"constrained"}} -->
 	<div class="wp-block-group">
 		<!-- wp:paragraph {"align":"center","textColor":"base","fontSize":"x-large"} -->
-		<p class="has-text-align-center has-base-color has-text-color has-x-large-font-size"><?php echo esc_html( apply_filters( 'quickwp/testimonial-on-background/testimonial', $quickwp_strings['testimonial'] ) ); ?></p>
+		<p class="has-text-align-center has-base-color has-text-color has-x-large-font-size"><?php $content->string( 'testimonial', 'testimonial' ); ?></p>
 		<!-- /wp:paragraph -->
 
 		<!-- wp:spacer {"height":"var:preset|spacing|10"} -->
@@ -31,7 +28,7 @@ $images = array(
 			<!-- /wp:image -->
 
 			<!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"top":"var:preset|spacing|10","bottom":"0"}}}} -->
-			<p class="has-text-align-center" style="margin-top:var(--wp--preset--spacing--10);margin-bottom:0"><?php echo esc_html( apply_filters( 'quickwp/testimonial-on-background/name', $quickwp_strings['testimonial_name'] ) ); ?></p>
+			<p class="has-text-align-center" style="margin-top:var(--wp--preset--spacing--10);margin-bottom:0"><?php $content->string( 'name', 'testimonial_name' ); ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:paragraph {"align":"center","style":{"typography":{"fontStyle":"normal","fontWeight":"300"}},"textColor":"contrast-3","fontSize":"small"} -->
