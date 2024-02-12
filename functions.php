@@ -308,9 +308,9 @@ add_filter( 'quickwp_strings', 'quickwp_strings' );
  * Register Templates
  */
 
- if ( ! function_exists( 'quickwp_templates' ) ) :
-	
- 	/**
+if ( ! function_exists( 'quickwp_templates' ) ) :
+
+	/**
 	 * Register Templates
 	 *
 	 * @since QuickWP 1.0

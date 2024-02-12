@@ -1,7 +1,7 @@
 <?php
 /**
  * Content class.
- * 
+ *
  * @package Codeinwp/QuickWPTheme
  */
 
@@ -20,7 +20,7 @@ class Content {
 
 	/**
 	 * Default Namespace.
-	 * 
+	 *
 	 * @var string
 	 */
 	public $default_namespace;
@@ -39,7 +39,7 @@ class Content {
 	 * @param string|null $default_namespace Default namespace.
 	 */
 	public function __construct( $slug, $default_namespace = null ) {
-		$this->strings = apply_filters( 'quickwp_strings', array() );
+		$this->strings   = apply_filters( 'quickwp_strings', array() );
 		$this->namespace = 'quickwp/' . $slug;
 
 		if ( $default_namespace ) {
@@ -53,7 +53,7 @@ class Content {
 	 * @param string $slug Slug.
 	 * @param string $string Strings.
 	 * @param string|null $default Default.
-	 * 
+	 *
 	 * @return string
 	 */
 	public function get_string( $slug, $string, $default = null ) {
@@ -68,7 +68,7 @@ class Content {
 
 	/**
 	 * Echo String.
-	 * 
+	 *
 	 * @param string $slug Slug.
 	 * @param string $string String.
 	 * @param string|null $default Default.
@@ -82,7 +82,7 @@ class Content {
 	 *
 	 * @param string $slug Slug.
 	 * @param string $image Image.
-	 * 
+	 *
 	 * @return string
 	 */
 	public function get_image( $slug, $image ) {
