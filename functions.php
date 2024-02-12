@@ -132,6 +132,10 @@ if ( ! defined( 'QUICKWP_URL' ) ) {
 	define( 'QUICKWP_URL', trailingslashit( get_template_directory_uri() ) );
 }
 
+if ( ! defined( 'QUICKWP_PATH' ) ) {
+	define( 'QUICKWP_PATH', trailingslashit( get_template_directory() ) );
+}
+
 /**
  * Enqueue block stylesheets.
  */
@@ -299,3 +303,31 @@ if ( ! function_exists( 'quickwp_strings' ) ) :
 endif;
 
 add_filter( 'quickwp_strings', 'quickwp_strings' );
+
+/**
+ * Register Templates
+ */
+
+ if ( ! function_exists( 'quickwp_templates' ) ) :
+	
+ 	/**
+	 * Register Templates
+	 *
+	 * @since QuickWP 1.0
+	 * @return array
+	 */
+	function quickwp_templates( $templates ) {
+		$templates = array(
+			'homepage' => array(
+				'homepage-1' => QUICKWP_PATH . 'templates/homepage-1.html',
+				'homepage-2' => QUICKWP_PATH . 'templates/homepage-2.html',
+				'homepage-3' => QUICKWP_PATH . 'templates/homepage-3.html',
+				'homepage-4' => QUICKWP_PATH . 'templates/homepage-4.html',
+			),
+		);
+
+		return $templates;
+	}
+endif;
+
+add_filter( 'quickwp_templates', 'quickwp_templates' );

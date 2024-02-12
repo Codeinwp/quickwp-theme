@@ -4,12 +4,9 @@
  * Slug: quickwp/content-with-image
  * Categories: quickwp/content
  */
+require_once QUICKWP_PATH . 'inc/class-content.php';
 
-$quickwp_strings = apply_filters( 'quickwp_strings', array() );
-
-$images = array(
-	apply_filters( 'quickwp/content-with-image/image', QUICKWP_URL . 'assets/images/qwp-img-02.webp' ),
-);
+$content = new ThemeIsle\QuickWPTheme\Content( 'content-with-image', 'content' );
 ?>
 
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|70","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"base-2","layout":{"type":"constrained"}} -->
@@ -20,7 +17,7 @@ $images = array(
 		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:60%">
 			<!-- wp:image {"id":242,"aspectRatio":"4/3","scale":"cover","sizeSlug":"full","linkDestination":"none","style":{"color":{}},"className":"is-style-default"} -->
 			<figure class="wp-block-image size-full is-style-default">
-				<img src="<?php echo esc_url( $images[0] ); ?>" alt="" class="wp-image-242" style="aspect-ratio:4/3;object-fit:cover"/>
+				<img src="<?php $content->image( 'image', 'qwp-img-02.webp' ); ?>" alt="" class="wp-image-242" style="aspect-ratio:4/3;object-fit:cover"/>
 			</figure>
 			<!-- /wp:image -->
 		</div>
@@ -29,17 +26,17 @@ $images = array(
 		<!-- wp:column {"verticalAlignment":"center","width":"40%"} -->
 		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:40%">
 			<!-- wp:heading -->
-			<h2 class="wp-block-heading"><?php echo esc_html( apply_filters( 'quickwp/content-with-image/title', $quickwp_strings['section_title'] ) ); ?></h2>
+			<h2 class="wp-block-heading"><?php $content->string( 'title', 'section_title', 'title' ); ?></h2>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph -->
-			<p><?php echo esc_html( apply_filters( 'quickwp/content-with-image/content', $quickwp_strings['paragraph_text'] ) ); ?></p>
+			<p><?php $content->string( 'content', 'paragraph_text', 'paragraph-1' ); ?></p>
 			<!-- /wp:paragraph -->
 
 			<!-- wp:buttons -->
 			<div class="wp-block-buttons">
 				<!-- wp:button -->
-				<div class="wp-block-button"><a class="wp-block-button__link wp-element-button"><?php echo esc_html( apply_filters( 'quickwp/content-with-image/button', $quickwp_strings['button_text_2'] ) ); ?></a></div>
+				<div class="wp-block-button"><a class="wp-block-button__link wp-element-button"><?php $content->string( 'button', 'button_text_2', 'button' ); ?>></a></div>
 				<!-- /wp:button -->
 			</div>
 			<!-- /wp:buttons -->

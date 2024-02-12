@@ -4,9 +4,9 @@
  * Slug: quickwp/features-row
  * Categories: quickwp/features
  */
+require_once QUICKWP_PATH . 'inc/class-content.php';
 
-$quickwp_strings = apply_filters( 'quickwp_strings', array() );
-
+$content = new ThemeIsle\QuickWPTheme\Content( 'features-row', 'features' );
 ?>
 
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|70","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|70","margin":{"top":"0","bottom":"0"}},"elements":{"link":{"color":{"text":"var:preset|color|contrast-4"}}}},"backgroundColor":"base-3","textColor":"contrast-4","layout":{"type":"constrained"},"metadata":{}} -->
@@ -16,11 +16,11 @@ $quickwp_strings = apply_filters( 'quickwp_strings', array() );
 		<!-- wp:column {"style":{"spacing":{"padding":{"left":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|20"},"border":{"top":{"width":"0px","style":"none"},"right":{"width":"0px","style":"none"},"bottom":{"width":"0px","style":"none"},"left":{"width":"4px"}}}} -->
 		<div class="wp-block-column" style="border-top-style:none;border-top-width:0px;border-right-style:none;border-right-width:0px;border-bottom-style:none;border-bottom-width:0px;border-left-width:4px;padding-left:var(--wp--preset--spacing--40)">
 			<!-- wp:heading {"textAlign":"left","level":3} -->
-			<h3 class="wp-block-heading has-text-align-left"><?php echo esc_html( apply_filters( 'quickwp/features-row/feature-1/title', $quickwp_strings['feature_title'] ) ); ?></h3>
+			<h3 class="wp-block-heading has-text-align-left"><?php $content->string( 'item-1/title', 'feature_title', 'item-1/title' ); ?></h3>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"align":"left"} -->
-			<p class="has-text-align-left"><?php echo esc_html( apply_filters( 'quickwp/features-row/feature-1/description', $quickwp_strings['feature_description'] ) ); ?></p>
+			<p class="has-text-align-left"><?php $content->string( 'item-1/description', 'feature_description', 'item-1/description' ); ?></p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:column -->
@@ -28,11 +28,11 @@ $quickwp_strings = apply_filters( 'quickwp_strings', array() );
 		<!-- wp:column {"style":{"spacing":{"padding":{"left":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|20"},"border":{"top":{"width":"0px","style":"none"},"right":{"width":"0px","style":"none"},"bottom":{"width":"0px","style":"none"},"left":{"width":"4px"}}}} -->
 		<div class="wp-block-column" style="border-top-style:none;border-top-width:0px;border-right-style:none;border-right-width:0px;border-bottom-style:none;border-bottom-width:0px;border-left-width:4px;padding-left:var(--wp--preset--spacing--40)">
 			<!-- wp:heading {"textAlign":"left","level":3} -->
-			<h3 class="wp-block-heading has-text-align-left"><?php echo esc_html( apply_filters( 'quickwp/features-row/feature-2/title', $quickwp_strings['feature_title'] ) ); ?></h3>
+			<h3 class="wp-block-heading has-text-align-left"><?php $content->string( 'item-2/title', 'feature_title', 'item-2/title' ); ?></h3>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"align":"left"} -->
-			<p class="has-text-align-left"><?php echo esc_html( apply_filters( 'quickwp/features-row/feature-2/description', $quickwp_strings['feature_description'] ) ); ?></p>
+			<p class="has-text-align-left"><?php $content->string( 'item-2/description', 'feature_description', 'item-2/description' ); ?></p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:column -->
@@ -40,11 +40,11 @@ $quickwp_strings = apply_filters( 'quickwp_strings', array() );
 		<!-- wp:column {"style":{"spacing":{"padding":{"left":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|20"},"border":{"top":{"width":"0px","style":"none"},"right":{"width":"0px","style":"none"},"bottom":{"width":"0px","style":"none"},"left":{"width":"4px"}}}} -->
 		<div class="wp-block-column" style="border-top-style:none;border-top-width:0px;border-right-style:none;border-right-width:0px;border-bottom-style:none;border-bottom-width:0px;border-left-width:4px;padding-left:var(--wp--preset--spacing--40)">
 			<!-- wp:heading {"textAlign":"left","level":3} -->
-			<h3 class="wp-block-heading has-text-align-left"><?php echo esc_html( apply_filters( 'quickwp/features-row/feature-3/title', $quickwp_strings['feature_title'] ) ); ?></h3>
+			<h3 class="wp-block-heading has-text-align-left"><?php $content->string( 'item-3/title', 'feature_title', 'item-3/title' ); ?></h3>
 			<!-- /wp:heading -->
 
 			<!-- wp:paragraph {"align":"left"} -->
-			<p class="has-text-align-left"><?php echo esc_html( apply_filters( 'quickwp/features-row/feature-3/description', $quickwp_strings['feature_description'] ) ); ?></p>
+			<p class="has-text-align-left"><?php $content->string( 'item-3/description', 'feature_description', 'item-3/description' ); ?></p>
 			<!-- /wp:paragraph -->
 		</div>
 		<!-- /wp:column -->
