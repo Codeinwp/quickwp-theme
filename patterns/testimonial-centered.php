@@ -1,45 +1,33 @@
 <?php
 /**
- * Title: Centered testimonial
- * Slug: twentytwentyfour/testimonial-centered
- * Keywords: quote, review, about
- * Categories: testimonials, text
- * Viewport width: 1300
+ * Title: Testimonial Centered
+ * Slug: quickwp/testimonial-centered
+ * Categories: quickwp/testimonials
  */
+require_once QUICKWP_PATH . 'inc/class-content.php';
+
+$content = new ThemeIsle\QuickWPTheme\Content( 'testimonial-centered' );
 ?>
 
-<!-- wp:group {"metadata":{"name":"<?php echo esc_html_x( 'Testimonial', 'Name of testimonal pattern', 'twentytwentyfour' ); ?>"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60","left":"var:preset|spacing|60","right":"var:preset|spacing|60"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"contrast","textColor":"base","layout":{"type":"constrained","contentSize":""}} -->
-<div class="wp-block-group alignfull has-base-color has-contrast-background-color has-text-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--60);padding-right:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60);padding-left:var(--wp--preset--spacing--60)">
-	<!-- wp:group {"layout":{"type":"constrained"}} -->
-	<div class="wp-block-group">
-		<!-- wp:paragraph {"align":"center","style":{"typography":{"lineHeight":"1.2"}},"textColor":"base","fontSize":"x-large","fontFamily":"heading"} -->
-		<p class="has-text-align-center has-base-color has-text-color has-heading-font-family has-x-large-font-size" style="line-height:1.2">
-			<em><?php echo esc_html_x( '“Études has saved us thousands of hours of work and has unlocked insights we never thought possible.”', 'Testimonial Text or Review Text Got From the Person', 'twentytwentyfour' ); ?></em>
-		</p>
+<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|70","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"raft-bg-alt","layout":{"type":"constrained"},"metadata":{}} -->
+<div class="wp-block-group alignfull has-raft-bg-alt-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--70);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--40)">
+	<!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|20"}},"layout":{"type":"default"}} -->
+	<div class="wp-block-group alignwide">
+		<!-- wp:image {"align":"center","id":235,"width":"88px","aspectRatio":"1","scale":"cover","sizeSlug":"full","linkDestination":"none","className":"is-resized is-style-rounded"} -->
+		<figure class="wp-block-image aligncenter size-full is-resized is-style-rounded"><img src="<?php $content->image( 'image', 'qwp-img-04.webp' ); ?>" alt="" class="wp-image-235" style="aspect-ratio:1;object-fit:cover;width:88px"/></figure>
+		<!-- /wp:image -->
+
+		<!-- wp:paragraph {"align":"center","fontSize":"x-large"} -->
+		<p class="has-text-align-center has-x-large-font-size"><?php $content->string( 'testimonial', 'testimonial' ); ?></p>
 		<!-- /wp:paragraph -->
 
-		<!-- wp:spacer {"height":"var:preset|spacing|10"} -->
-		<div style="height:var(--wp--preset--spacing--10)" aria-hidden="true" class="wp-block-spacer"></div>
-		<!-- /wp:spacer -->
+		<!-- wp:paragraph {"align":"center","style":{"elements":{"link":{"color":{"text":"var:preset|color|raft-accent"}}}},"textColor":"raft-accent","fontSize":"medium"} -->
+		<p class="has-text-align-center has-raft-accent-color has-text-color has-link-color has-medium-font-size">★ ★ ★ ★ ★</p>
+		<!-- /wp:paragraph -->
 
-		<!-- wp:group {"metadata":{"name":"<?php echo esc_html_x( 'Testimonial source', 'Name of testimonial citation group', 'twentytwentyfour' ); ?>"},"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"center","flexWrap":"nowrap"}} -->
-		<div class="wp-block-group">
-			<!-- wp:image {"align":"center","width":"60px","aspectRatio":"1","scale":"cover","sizeSlug":"thumbnail","linkDestination":"none","style":{"border":{"radius":"100px"}}} -->
-			<figure class="wp-block-image aligncenter size-thumbnail is-resized has-custom-border">
-				<img alt="" style="border-radius:100px;aspect-ratio:1;object-fit:cover;width:60px" />
-			</figure>
-			<!-- /wp:image -->
-
-			<!-- wp:paragraph {"align":"center","style":{"spacing":{"margin":{"top":"var:preset|spacing|10","bottom":"0"}}}} -->
-			<p class="has-text-align-center" style="margin-top:var(--wp--preset--spacing--10);margin-bottom:0"><?php echo esc_html_x( 'Annie Steiner', 'Name of Person Provided the Testimonial', 'twentytwentyfour' ); ?></p>
-			<!-- /wp:paragraph -->
-
-			<!-- wp:paragraph {"align":"center","style":{"typography":{"fontStyle":"normal","fontWeight":"300"}},"textColor":"contrast-3","fontSize":"small"} -->
-			<p class="has-text-align-center has-contrast-3-color has-text-color has-small-font-size" style="font-style:normal;font-weight:300"><?php echo esc_html_x( 'CEO, Greenprint', 'Designation of Person Provided Testimonial', 'twentytwentyfour' ); ?></p>
-			<!-- /wp:paragraph -->
-		</div>
-		<!-- /wp:group -->
-
+		<!-- wp:paragraph {"align":"center","style":{"typography":{"textTransform":"uppercase","fontStyle":"normal","fontWeight":"600","letterSpacing":"2px"}},"fontSize":"small"} -->
+		<p class="has-text-align-center has-small-font-size" style="font-style:normal;font-weight:600;letter-spacing:2px;text-transform:uppercase"><?php $content->string( 'name', 'testimonial_name' ); ?></p>
+		<!-- /wp:paragraph -->
 	</div>
 	<!-- /wp:group -->
 </div>

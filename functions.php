@@ -1,31 +1,46 @@
 <?php
 /**
- * Twenty Twenty-Four functions and definitions
+ * QuickWP functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Twenty Twenty-Four
- * @since Twenty Twenty-Four 1.0
+ * @package QuickWP
+ * @since QuickWP 1.0
  */
+
+/**
+ * Register Theme Support
+ */
+
+if ( ! function_exists( 'quickwp_setup' ) ) :
+	/**
+	 * Sets up theme defaults and registers support for various WordPress features.
+	 */
+	function quickwp_setup() {
+		remove_theme_support( 'core-block-patterns' );
+	}
+endif;
+
+add_action( 'after_setup_theme', 'quickwp_setup' );
 
 /**
  * Register block styles.
  */
 
-if ( ! function_exists( 'twentytwentyfour_block_styles' ) ) :
+if ( ! function_exists( 'quickwp_block_styles' ) ) :
 	/**
 	 * Register custom block styles
 	 *
-	 * @since Twenty Twenty-Four 1.0
+	 * @since QuickWP 1.0
 	 * @return void
 	 */
-	function twentytwentyfour_block_styles() {
+	function quickwp_block_styles() {
 
 		register_block_style(
 			'core/details',
 			array(
 				'name'         => 'arrow-icon-details',
-				'label'        => __( 'Arrow icon', 'twentytwentyfour' ),
+				'label'        => __( 'Arrow icon', 'quickwp' ),
 				/*
 				 * Styles for the custom Arrow icon style of the Details block
 				 */
@@ -48,7 +63,7 @@ if ( ! function_exists( 'twentytwentyfour_block_styles' ) ) :
 			'core/post-terms',
 			array(
 				'name'         => 'pill',
-				'label'        => __( 'Pill', 'twentytwentyfour' ),
+				'label'        => __( 'Pill', 'quickwp' ),
 				/*
 				 * Styles variation for post terms
 				 * https://github.com/WordPress/gutenberg/issues/24956
@@ -57,13 +72,17 @@ if ( ! function_exists( 'twentytwentyfour_block_styles' ) ) :
 				.is-style-pill a,
 				.is-style-pill span:not([class], [data-rich-text-placeholder]) {
 					display: inline-block;
-					background-color: var(--wp--preset--color--base-2);
-					padding: 0.375rem 0.875rem;
-					border-radius: var(--wp--preset--spacing--20);
+					background-color: var(--wp--preset--color--accent);
+					color: var(--wp--preset--color--contrast-4);
+					padding: var(--wp--preset--spacing--10) var(--wp--preset--spacing--20);
+					border-radius: 999px;
+					line-height:1;
+
 				}
 
 				.is-style-pill a:hover {
-					background-color: var(--wp--preset--color--contrast-3);
+					background-color: var(--wp--preset--color--accent-2);
+					text-decoration:none;
 				}',
 			)
 		);
@@ -71,7 +90,7 @@ if ( ! function_exists( 'twentytwentyfour_block_styles' ) ) :
 			'core/list',
 			array(
 				'name'         => 'checkmark-list',
-				'label'        => __( 'Checkmark', 'twentytwentyfour' ),
+				'label'        => __( 'Checkmark', 'quickwp' ),
 				/*
 				 * Styles for the custom checkmark list block style
 				 * https://github.com/WordPress/gutenberg/issues/51480
@@ -90,7 +109,7 @@ if ( ! function_exists( 'twentytwentyfour_block_styles' ) ) :
 			'core/navigation-link',
 			array(
 				'name'         => 'arrow-link',
-				'label'        => __( 'With arrow', 'twentytwentyfour' ),
+				'label'        => __( 'With arrow', 'quickwp' ),
 				/*
 				 * Styles for the custom arrow nav link block style
 				 */
@@ -104,60 +123,31 @@ if ( ! function_exists( 'twentytwentyfour_block_styles' ) ) :
 				}',
 			)
 		);
-		register_block_style(
-			'core/heading',
-			array(
-				'name'         => 'asterisk',
-				'label'        => __( 'With asterisk', 'twentytwentyfour' ),
-				'inline_style' => "
-				.is-style-asterisk:before {
-					content: '';
-					width: 1.5rem;
-					height: 3rem;
-					background: var(--wp--preset--color--contrast-2, currentColor);
-					clip-path: path('M11.93.684v8.039l5.633-5.633 1.216 1.23-5.66 5.66h8.04v1.737H13.2l5.701 5.701-1.23 1.23-5.742-5.742V21h-1.737v-8.094l-5.77 5.77-1.23-1.217 5.743-5.742H.842V9.98h8.162l-5.701-5.7 1.23-1.231 5.66 5.66V.684h1.737Z');
-					display: block;
-				}
-
-				/* Hide the asterisk if the heading has no content, to avoid using empty headings to display the asterisk only, which is an A11Y issue */
-				.is-style-asterisk:empty:before {
-					content: none;
-				}
-
-				.is-style-asterisk:-moz-only-whitespace:before {
-					content: none;
-				}
-
-				.is-style-asterisk.has-text-align-center:before {
-					margin: 0 auto;
-				}
-
-				.is-style-asterisk.has-text-align-right:before {
-					margin-left: auto;
-				}
-
-				.rtl .is-style-asterisk.has-text-align-left:before {
-					margin-right: auto;
-				}",
-			)
-		);
 	}
 endif;
 
-add_action( 'init', 'twentytwentyfour_block_styles' );
+add_action( 'init', 'quickwp_block_styles' );
+
+if ( ! defined( 'QUICKWP_URL' ) ) {
+	define( 'QUICKWP_URL', trailingslashit( get_template_directory_uri() ) );
+}
+
+if ( ! defined( 'QUICKWP_PATH' ) ) {
+	define( 'QUICKWP_PATH', trailingslashit( get_template_directory() ) );
+}
 
 /**
  * Enqueue block stylesheets.
  */
 
-if ( ! function_exists( 'twentytwentyfour_block_stylesheets' ) ) :
+if ( ! function_exists( 'quickwp_block_stylesheets' ) ) :
 	/**
 	 * Enqueue custom block stylesheets
 	 *
-	 * @since Twenty Twenty-Four 1.0
+	 * @since QuickWP 1.0
 	 * @return void
 	 */
-	function twentytwentyfour_block_stylesheets() {
+	function quickwp_block_stylesheets() {
 		/**
 		 * The wp_enqueue_block_style() function allows us to enqueue a stylesheet
 		 * for a specific block. These will only get loaded when the block is rendered
@@ -169,7 +159,7 @@ if ( ! function_exists( 'twentytwentyfour_block_stylesheets' ) ) :
 		wp_enqueue_block_style(
 			'core/button',
 			array(
-				'handle' => 'twentytwentyfour-button-style-outline',
+				'handle' => 'quickwp-button-style-outline',
 				'src'    => get_parent_theme_file_uri( 'assets/css/button-outline.css' ),
 				'ver'    => wp_get_theme( get_template() )->get( 'Version' ),
 				'path'   => get_parent_theme_file_path( 'assets/css/button-outline.css' ),
@@ -178,29 +168,166 @@ if ( ! function_exists( 'twentytwentyfour_block_stylesheets' ) ) :
 	}
 endif;
 
-add_action( 'init', 'twentytwentyfour_block_stylesheets' );
+add_action( 'init', 'quickwp_block_stylesheets' );
 
 /**
- * Register pattern categories.
+ * Register pattern categories
  */
 
-if ( ! function_exists( 'twentytwentyfour_pattern_categories' ) ) :
+if ( ! function_exists( 'quickwp_pattern_categories' ) ) :
 	/**
-	 * Register pattern categories
+	 * Register categories
 	 *
-	 * @since Twenty Twenty-Four 1.0
+	 * @since QuickWP 1.0
 	 * @return void
 	 */
-	function twentytwentyfour_pattern_categories() {
-
-		register_block_pattern_category(
-			'page',
-			array(
-				'label'       => _x( 'Pages', 'Block pattern category' ),
-				'description' => __( 'A collection of full page layouts.' ),
-			)
+	function quickwp_pattern_categories() {
+		$categories = array(
+			'quickwp/featured'           => array( 'label' => __( 'Featured', 'quickwp' ) ),
+			'quickwp/headers'            => array( 'label' => __( 'Headers', 'quickwp' ) ),
+			'quickwp/footers'            => array( 'label' => __( 'Footers', 'quickwp' ) ),
+			'quickwp/heroes_page_titles' => array( 'label' => __( 'Heroes / Page Titles', 'quickwp' ) ),
+			'quickwp/features'           => array( 'label' => __( 'Features', 'quickwp' ) ),
+			'quickwp/content'            => array( 'label' => __( 'Content', 'quickwp' ) ),
+			'quickwp/testimonials'       => array( 'label' => __( 'Testimonials', 'quickwp' ) ),
+			'quickwp/team'               => array( 'label' => __( 'Team', 'quickwp' ) ),
+			'quickwp/pricing'            => array( 'label' => __( 'Pricing', 'quickwp' ) ),
+			'quickwp/call_to_action'     => array( 'label' => __( 'Call to Action', 'quickwp' ) ),
+			'quickwp/post_loops'         => array( 'label' => __( 'Post Loops', 'quickwp' ) ),
+			'quickwp/pages'              => array( 'label' => __( 'Pages', 'quickwp' ) ),
 		);
+
+		foreach ( $categories as $slug => $args ) {
+			if ( WP_Block_Pattern_Categories_Registry::get_instance()->is_registered( $slug ) ) {
+				continue;
+			}
+
+			register_block_pattern_category( $slug, $args );
+		}
 	}
 endif;
 
-add_action( 'init', 'twentytwentyfour_pattern_categories' );
+add_action( 'init', 'quickwp_pattern_categories' );
+
+/**
+ * Register Strings
+ */
+
+if ( ! function_exists( 'quickwp_strings' ) ) :
+	/** Register strings
+	 *
+	 * @since QuickWP 1.0
+	 * @return array
+	 */
+	function quickwp_strings( $strings ) {
+		$strings = array(
+
+			// Generic patterns.
+			'hero_title'              => __( 'Just another hero title to strengthen your message', 'quickwp' ),
+			'quickwp_feature_1'       => __( 'Easy to customise', 'quickwp' ),
+			'quickwp_feature_2'       => __( 'Patterns Collection', 'quickwp' ),
+			'quickwp_feature_3'       => __( 'Powered by Blocks', 'quickwp' ),
+			'page_title'              => __( 'This is a page title', 'quickwp' ),
+			'about_page_title'        => __( 'About our Team', 'quickwp' ),
+			'about_me'                => __( 'About me', 'quickwp' ),
+			'services_page_title'     => __( 'Explore our Services', 'quickwp' ),
+			'section_title'           => __( 'This is section title', 'quickwp' ),
+			'subtitle'                => __( 'Subtitle', 'quickwp' ),
+			'section_description'     => __( 'A short section description', 'quickwp' ),
+			'paragraph_text'          => __( 'This is placeholder text, feel free to replace it with your unique content. It  is included here just to provide you with a better understanding of how your text will fit in the layout.', 'quickwp' ),
+			'short_text'              => __( 'Just some placeholder text', 'quickwp' ),
+
+			// Feature patterns.
+			'feature_section_title'   => __( 'Showcase your Features and Services', 'quickwp' ),
+			'feature_title'           => __( 'This is feature title', 'quickwp' ),
+			'feature_description'     => __( 'A placeholder description that you can replace with your own content.', 'quickwp' ),
+			'button_text'             => __( 'Learn More', 'quickwp' ),
+			'button_text_2'           => __( 'Get Started', 'quickwp' ),
+
+			// Team patterns.
+			'team_section_title'      => __( 'Our Team', 'quickwp' ),
+			'team_member'             => __( 'Team member name', 'quickwp' ),
+			'member_role'             => __( 'Co-founder / Other Role', 'quickwp' ),
+
+			// Pricing patterns.
+			'pricing_section_title'   => __( 'A pricing section. Join premium!', 'quickwp' ),
+			'plan_title'              => __( 'Plan title', 'quickwp' ),
+			'price'                   => __( '$19.99', 'quickwp' ),
+			'price_feature'           => __( 'A pricing feature', 'quickwp' ),
+
+			// Contact patterns.
+			'contact_page_title'      => __( 'Get in touch', 'quickwp' ),
+			'contact_section_title'   => __( 'Contact details', 'quickwp' ),
+			'follow'                  => __( 'Follow us', 'quickwp' ),
+			'contact_details'         => __( 'Contact detail example', 'quickwp' ),
+
+			// FAQ patterns.
+			'faq_section_title'       => __( 'Frequently Asked Questions', 'quickwp' ),
+			'faq_title'               => __( 'Just a frequent question', 'quickwp' ),
+
+			// Portfolio patterns.
+			'portfolio_section_title' => __( 'Selected Portfolio', 'quickwp' ),
+			'portfolio_title'         => __( 'A project title', 'quickwp' ),
+			'portfolio_client'        => __( 'Client Name', 'quickwp' ),
+
+			// Loops and templates.
+			'read_more'               => __( 'Read more', 'quickwp' ),
+			'continue_reading'        => __( 'Continue reading', 'quickwp' ),
+			'no_posts_found'          => __( 'No posts were found', 'quickwp' ),
+			'search_results'          => __( 'Search results', 'quickwp' ),
+			'search_button'           => __( 'Search', 'quickwp' ),
+			'search_placeholder'      => __( 'Search for a keyword...', 'quickwp' ),
+			'404'                     => __( '404', 'quickwp' ),
+			'page_not_found'          => __( 'Unfortunately the page was not found.', 'quickwp' ),
+			'categories'              => __( 'Categories', 'quickwp' ),
+			'read_also'               => __( 'Read also…', 'quickwp' ),
+			'previous'                => __( 'Previous Page', 'quickwp' ),
+			'next'                    => __( 'Next Page', 'quickwp' ),
+
+			// Content Patterns.
+			'content_title'           => __( 'A generic content title', 'quickwp' ),
+			'content_subtitle'        => __( 'A content subtitle', 'quickwp' ),
+			'lorem_ipsum_subtitle'    => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', 'quickwp' ),
+
+			// Testimonial patterns.
+			'testimonial'             => __( '"...Absolutely one of the best services out there, very professional and easy-going experience, highly recommended..."', 'quickwp' ),
+			'testimonial_name'        => __( 'Jason Doe', 'quickwp' ),
+
+			// CTA patterns.
+			'cta_title'               => __( 'Get started today, get in touch!', 'quickwp' ),
+			'quickwp_cta_title'       => __( 'Create your new website today, with QuickWP!', 'quickwp' ),
+		);
+
+		return $strings;
+	}
+endif;
+
+add_filter( 'quickwp_strings', 'quickwp_strings' );
+
+/**
+ * Register Templates
+ */
+
+if ( ! function_exists( 'quickwp_templates' ) ) :
+
+	/**
+	 * Register Templates
+	 *
+	 * @since QuickWP 1.0
+	 * @return array
+	 */
+	function quickwp_templates( $templates ) {
+		$templates = array(
+			'homepage' => array(
+				'homepage-1' => QUICKWP_PATH . 'templates/homepage-1.html',
+				'homepage-2' => QUICKWP_PATH . 'templates/homepage-2.html',
+				'homepage-3' => QUICKWP_PATH . 'templates/homepage-3.html',
+				'homepage-4' => QUICKWP_PATH . 'templates/homepage-4.html',
+			),
+		);
+
+		return $templates;
+	}
+endif;
+
+add_filter( 'quickwp_templates', 'quickwp_templates' );

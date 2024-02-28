@@ -58,4 +58,9 @@
 	<rule ref="WordPress.Files.FileName">
 		<exclude-pattern>*</exclude-pattern>
 	</rule>
+
+	<!-- We're using slashed hook names. -->
+	<rule ref="WordPress.NamingConventions.ValidHookName.UseUnderscores">
+		<exclude-pattern>*</exclude-pattern>
+	</rule>
 </ruleset>
